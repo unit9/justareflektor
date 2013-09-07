@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>{{ copy.meta.title }}</title>
+    <meta name="description" content="{{ copy.meta.description }}"/>
+    <meta name="keywords" content="af, Candlelight"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <base href="/">
+
+    <meta property="og:url" content="{{ url }}"/>
+    <meta property="og:image" content="{{ host }}/img/og/facebook.jpg"/>
+    <meta property="og:title" content="{{ copy.meta.og.title }}"/>
+    <meta property="og:description" content="{{ copy.meta.og.description }}"/>
+
+    <link rel="apple-touch-icon" href="img/apple/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple/apple-touch-icon-144x144.png"/>
+
+    <link rel="stylesheet" href="css/screen.css"/>
+    <link rel="stylesheet" href="css/assets.css"/>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/lib/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<aside class="code-loader">
+    <img src="img/essential/ajax-loader.gif"/>
+</aside>
+
+<div class="main fullscreen-target">
+
+    <header class="PersistentControlsView"></header>
+    <section class="PreloaderView shown"></section>
+    <section class="LandingPageView"></section>
+    <section class="SetupView"></section>
+    <section class="SyncSuccessView"></section>
+    <section class="InstructionsView"></section>
+    <section class="MouseAllowCameraView"></section>
+    <section class="CameraDeniedView"></section>
+    <section class="ExperienceLoadingView"></section>
+    <section class="ExperienceView"></section>
+    <nav class="TimelineView"></nav>
+    <section class="HelpView"></section>
+    <section class="PerformanceWarningView"></section>
+    <section class="EndScreenView"></section>
+    <footer class="FooterGoogleView"></footer>
+    <footer class="FooterLinksView"></footer>
+    <section class="AboutView"></section>
+
+    <section class="DeviceDisconnectedView"></section>
+    <section class="RuntimeErrorView"></section>
+    <section class="PlatformNotSupportedView"></section>
+
+</div>
+
+<aside class="detection">
+
+    <div class="desktop"></div>
+    <div class="tablet"></div>
+    <div class="mobile"></div>
+    <div class="large"></div>
+    <div class="display-normal"></div>
+    <div class="display-retina"></div>
+    <div class="url-main"></div>
+
+</aside>
+
+<aside class="preload"></aside>
+
+<script>
+    var LANGUAGE = '{{language}}';
+    var LANGUAGE_REDIRECT = '{{language_redirect}}';
+
+    if (LANGUAGE_REDIRECT === 'True') {
+        window.location.href = '/?lng=' + LANGUAGE;
+    }
+</script>
+
+<!--
+* Main script
+* Loaded asynchronously to allow content to show up before the logic executes.
+ -->
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
