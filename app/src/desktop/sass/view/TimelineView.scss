@@ -1,0 +1,247 @@
+nav.TimelineView {
+
+  @extend %View;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  width: 100%;
+  
+  /* disable selecting */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  &.shown {
+
+    z-index: 2;
+
+  }
+
+  @include transition-property(margin-bottom);
+  @include transition-duration(1s);
+
+  &.in {
+
+    margin-bottom: 0px;
+
+  }
+
+  &.out {
+
+    margin-bottom: -80px;
+
+  }
+
+  .seeker {
+
+    -webkit-transform: translate3d(0, 0, 0);
+
+    position: fixed;
+    width: 100%;
+    bottom: -60px;
+    height: 100px;
+    left: -20px;
+
+    .error-touch {
+      display: none;
+      position: absolute;
+      top: -60px;
+      left: 20px;
+      color: white;
+      font-size: 12px;
+
+      .sleep-touch.touch-up & {
+        display: block;
+      }
+    }
+
+    .captions {
+      position: relative;
+      bottom: 47px;
+
+      .caption {
+        position: absolute;
+        opacity: 0.5;
+        height: 42px;
+        overflow: hidden;
+
+        .progress {
+
+          background-color: transparent;
+          position: absolute;
+          width: 0%;
+          height: 4px;
+
+        }
+
+
+
+
+        .actual-time {
+          background-color: rgb(16, 183, 248);
+          width: 100px;
+          height: 2px;
+          position: absolute;
+          top: 59px;
+        }
+
+        width: 120px;
+        background-color: rgb(202, 212, 231);
+
+        .time {
+          @include font-size(9px);
+          line-height: 10px;
+          margin-top: 4px;
+          margin-bottom: 4px;
+        }
+
+        p {
+          -webkit-font-smoothing: auto;
+          -webkit-text-stroke-width: 0px;
+          font-family: monospace;
+          color: black;
+          @include font-size(12px);
+          padding-left: 10px;
+
+          &.name {
+
+            line-height: 12px;
+            margin-top: -5px;
+            margin-bottom: 8px;
+
+          }
+
+        }
+
+        &.active {
+
+          opacity: 1;
+          z-index: 2;
+          background-color: white;
+
+          .progress {
+
+            background-color: $heroRedColor;
+
+          }
+
+        }
+
+      }
+    }
+
+    .bar {
+
+      position: fixed;
+      bottom: 93px;
+      width: 100%;
+      height: 4px;
+      background-color: #4d4d4d;
+      z-index: 3;
+      cursor: pointer;
+
+      .progress {
+
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 4px;
+        width: 0%;
+        float: left;
+        background-color: $heroRedColor;
+
+      }
+
+      .buffer {
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        float: left;
+        z-index:-2;
+
+      }
+
+      .handler {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 4px;
+        width: 4px;
+        float: left;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 4px;
+        top: -4px;
+        left: -8px;
+        cursor: pointer;
+        @include border-radius(8px);
+
+        &:hover {
+
+          background-color: transparent;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .content {
+
+    .controls {
+
+      -webkit-transform: translateY(7px);
+      -moz-transform: translateY(7px);
+
+      .play-pause {
+
+        position: relative;
+        left: -1px;
+        top: -12px;
+
+      }
+
+      .time {
+
+        margin-left: 20px;
+        color: white;
+
+        .elapsed, .separator, .total {
+
+          display: inline-block;
+          @include font-size(12px);
+          letter-spacing: 1px;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        .separator {
+
+          margin: 0 -2px;
+
+        }
+
+      }
+
+      .play-pause, .time {
+
+        display: inline-block;
+
+      }
+
+    }
+
+  }
+
+}

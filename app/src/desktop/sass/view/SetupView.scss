@@ -1,0 +1,63 @@
+@import "compass/typography/lists/horizontal-list";
+@import "compass/css3";
+
+section.SetupView {
+
+  @extend %PageView;
+
+  $setupViewWidth: 700px;
+  $setupViewHeight: 230px;
+
+  .fallback{
+
+    display: block;
+
+  }
+
+  .content {
+
+    position: absolute;
+    width: $setupViewWidth;
+    height: $setupViewHeight;
+    left: 50%;
+    top: 50%;
+    margin-left: -$setupViewWidth * 0.5;
+    margin-top: -$setupViewHeight * 0.5;
+    text-align: center;
+
+    @include font-size(17px);
+    letter-spacing: 1px;
+    line-height: 24px;
+
+    .instructions {
+
+      margin-top: 20px;
+      height: 130px;
+
+      span.code {
+
+        display: block;
+        @include font-size(50px);
+        margin-top: 6px;
+        letter-spacing: 10px;
+        height: 60px;
+
+      }
+
+    }
+
+  }
+
+  .mouse-mode {
+
+    position: relative;
+    left: 50%;
+    width: 700px;
+    margin-left: -350px;
+    text-align: center;
+    margin-top: 86px;
+    font-size: 15px;
+
+  }
+
+}

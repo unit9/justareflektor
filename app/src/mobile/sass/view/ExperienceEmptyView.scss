@@ -1,0 +1,50 @@
+section.ExperienceEmptyView {
+
+  @extend %PageView;
+
+  $experienceEmptyViewWidth: 290px;
+  $experienceEmptyViewHeight: 130px;
+
+  background-color: black;
+
+  .page {
+    display: table;
+  }
+
+  .content {
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .title, .subtitle {
+      width: $experienceEmptyViewWidth;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+
+    .title {
+
+      @include font-size(24px);
+      margin-bottom: 32px;
+
+    }
+
+    .subtitle {
+
+      @include font-size(19px);
+      line-height: 20px;
+      margin-top: 16px;
+      margin-bottom: 32px;
+
+    }
+
+    button.box {
+      @include font-size(19px);
+      color: #000;
+      font-weight: bold;      
+    }    
+
+  }
+
+}

@@ -1,0 +1,35 @@
+/**
+ * @author Maciej Zasada maciejzsd@gmail.com
+ */
+
+@import "detection";
+
+.debug {
+
+  .device:after {
+
+    @include mobile {
+      content: 'mobile';
+    }
+
+    @include tablet {
+      content: 'tablet';
+    }
+
+    @include desktop {
+      content: 'desktop';
+    }
+
+  }
+
+  .screen:after {
+
+    content: 'normal';
+
+    @include retina {
+      content: 'retina';
+    }
+
+  }
+
+}

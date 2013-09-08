@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Analyze Audio to JSON</title>
+    <link rel="stylesheet" type="text/css" href="./styles/analysis.css">
+    <script src="/third-party/two.js"></script>
+  </head>
+  <body>
+
+    <div id="drop-zone">
+      <p>Drop Audio File Here</p>
+    </div>
+
+    <div id="output">
+      <textarea></textarea>
+    </div>
+
+    <div class="scripts">
+      <script>
+
+        function handleFileSelect(evt) {
+
+          evt.stopPropagation();
+          evt.preventDefault();
+
+          var fr = new FileReader();
+          var resolution = 1000, result = window.result = { waveforms: [], resolution: resolution }, index = 0;
+          var ended = false;
+          document.querySelector('#drop-zone p').innerHTML = 'Analyzing Audio...';
+
+          fr.onload = function(e) {
+
+            var ctx = window.ctx = new webkitAudioContext();
+            ctx.decodeAudioData(e.target.result, function(buffer) {
+
+              var analyser = ctx.createAnalyser();
+              analyser.connect(ctx.destination);
+              analyser.fftSize = 64;
+
+              var source = ctx.createBufferSource();
+              source.buffer = buffer;
+              source.connect(ctx.destination);
+              source.connect(analyser);
+              source.start(0);
+
+              // Exports
+              result.duration = buffer.duration;
+              source.onended = function() {
+                ended = true;
+                document.querySelector('#output textarea').innerHTML = JSON.stringify(result);
+              };
+
+              var loop = function() {
+
+                if (ended) {
+                  return;
+                }
+
+                if (ctx.currentTime > index * (resolution / 1000)) {
+                  result.waveforms.push(getAverage());
+                  index++;
+                }
+
+                requestAnimationFrame(loop);
+
+              };
+
+              var getAverage = function() {
+
+                var avg = 0;
+
+                var frequencies = new Uint8Array(analyser.frequencyBinCount);
+                analyser.getByteFrequencyData(frequencies);
+                _.each(frequencies, function(v) {
+                  avg += v;
+                });
+
+                return avg / analyser.frequencyBinCount;
+
+              };
+
+              loop();
+
+            });
+
+          };
+
+          var files = evt.dataTransfer.files; // FileList object.
+          _.each(files, function(f) {
+            fr.readAsArrayBuffer(f);
+          });
+
+        }
+
+        function handleDragOver(evt) {
+          evt.stopPropagation();
+          evt.preventDefault();
+          evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+        }
+
+        // Setup the dnd listeners.
+        var dropZone = document.querySelector('#drop-zone');
+        dropZone.addEventListener('dragover', handleDragOver, false);
+        dropZone.addEventListener('drop', handleFileSelect, false);
+
+      </script>
+    </div>
+
+  </body>
+</html>

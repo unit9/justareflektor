@@ -1,0 +1,23 @@
+section.SyncSuccessView {
+
+  @extend %PageView;
+
+  $syncScuccessViewWidth: 700px;
+  $syncSuccessViewHeight: 20px;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $syncScuccessViewWidth;
+    height: $syncSuccessViewHeight;
+    margin-left: -$syncScuccessViewWidth * 0.5;
+    margin-top: -$syncSuccessViewHeight * 0.5;
+    text-align: center;
+
+    @include font-size(17px);
+
+  }
+
+}

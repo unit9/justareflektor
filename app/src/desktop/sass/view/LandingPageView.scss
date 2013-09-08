@@ -1,0 +1,201 @@
+section.LandingPageView {
+
+  $landingPageViewWidth: 245px * 2;
+  $landingPageViewHeight: 560px;
+  $supportFirefox: false;
+
+  @extend %PageView;
+
+  .background {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 90% 20%;
+
+  }
+
+  .gradient {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 78px;
+    background-image: url('/img/main/home_gradient.png');
+    background-repeat: repeat-x;
+  }
+
+  .content {
+
+    position: absolute;
+    right: 20px + 245px * 2;
+    //bottom: $landingPageViewHeight * 0.2;
+    bottom: 30%;
+    margin-bottom: -100px;
+    //top: 50%;
+    width: $landingPageViewWidth;
+    //height: $landingPageViewHeight;
+    //margin-top: -$landingPageViewHeight * 0.8;
+    margin-left: -$landingPageViewWidth;
+    text-align: center;
+
+    @media screen and (max-height: 650px) {
+      margin-bottom: 0px;
+      bottom: 110px;
+    }
+
+    .hero-logo {
+
+      margin: 0 auto;
+      margin-top: 2px;
+      position: relative;
+      
+      .browser-Chrome & {
+
+        cursor: pointer;
+
+      }
+
+      @if $supportFirefox {
+
+        .browser-Firefox & {
+
+          cursor: pointer;
+
+        }
+
+      }
+    }
+
+    .title {
+
+      @include font-size(17px);
+      margin: 7px auto 0;
+      width: 350px;
+      line-height: 21px;
+    }
+
+    .requirements {
+
+      margin-top: -4px;
+      @include font-size(12px);
+      letter-spacing: 1px;
+
+    }
+
+    .enter {
+
+      display: none;
+      margin-top: 24px;
+
+      .browser-Chrome & {
+
+        display: inline-block;
+
+      }
+
+      @if $supportFirefox {
+
+        .browser-Firefox & {
+
+          display: inline-block;
+
+        }
+
+      }
+
+    }
+
+    .error-browser {
+
+      display: block;
+      color: white;
+      margin-top: 20px;
+      @include font-size(17px);
+      letter-spacing: 1px;
+      line-height: 22px;
+      padding: 0 55px;
+
+      &.ff {
+        display: none;
+      }
+
+      a {
+
+        text-decoration: underline;
+        cursor: pointer;
+
+      }
+
+      .browser-Chrome & {
+
+        display: none;
+
+      }
+
+      @if $supportFirefox {
+
+        .browser-Firefox & {
+
+          display: none;
+
+        }
+
+      } @else {
+
+        .browser-Firefox & {
+
+          display: none;
+
+          &.ff {
+
+            display: block;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .fallback {
+      
+      padding: 43px;
+      margin-top: 8px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255,255,255,0.5);
+      font-size: 17.9px;
+      line-height: 18px;
+      font-style: italic;
+
+    }
+
+  }
+
+  .mouse-mode {
+
+     display: none;
+
+     .browser-Chrome & {
+
+        position: absolute;
+        left: 250px;
+        bottom: 23px;
+        letter-spacing: 2px;
+        @include font-size(12px);
+        color: white;
+
+        a {
+          text-decoration: underline;
+        }
+
+    }
+
+  }
+
+}

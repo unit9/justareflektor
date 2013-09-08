@@ -1,0 +1,29 @@
+{
+    "name": "arcade-fire-desktop",
+    "author": "maciej <maciej@unit9.com>",
+    "description": "Arcade Fire - Reflektor",
+    "version": "0.1.0",
+    "private": true,
+    "engines": {
+        "node": ">= 0.10.4"
+    },
+    "dependencies": {
+        "grunt": "*"
+    },
+    "scripts": {},
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-jslint": "~1.0.0",
+        "grunt-contrib-handlebars": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-watch": "0.4",
+        "grunt-gae": "0.1.x",
+        "grunt-exec": "*",
+        "grunt-notify": "*"
+    }
+}

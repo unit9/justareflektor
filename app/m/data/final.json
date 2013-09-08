@@ -1,0 +1,22 @@
+{
+    "mobile": [
+        {
+            "src": "Sounds_assets/A_001000_018201.mp3",
+            "when": 1,
+            "duration": 18.201,
+            "loop": false
+        },
+        {
+            "src": "Sounds_assets/B_023783_008981.mp3",
+            "when": 23.783,
+            "duration": 8.981,
+            "loop": false
+        },
+        {
+            "src": "Sounds_assets/C_034692_007056.mp3",
+            "when": 34.692,
+            "duration": 7.056,
+            "loop": false
+        }
+    ]
+}

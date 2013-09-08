@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Crimson Roman';
+  src: url('../fonts/crimson-roman-webfont.eot');
+  src: url('../fonts/crimson-roman-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/crimson-roman-webfont.woff') format('woff'),
+  url('../fonts/crimson-roman-webfont.ttf') format('truetype'),
+  url('../fonts/crimson-roman-webfont.svg#crimsonroman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Crimson Roman Full';
+  src: url('../fonts/crimson-roman-full-webfont.eot');
+  src: url('../fonts/crimson-roman-full-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/crimson-roman-full-webfont.woff') format('woff'),
+  url('../fonts/crimson-roman-full-webfont.ttf') format('truetype'),
+  url('../fonts/crimson-roman-full-webfont.svg#crimsonroman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  src: url('../fonts/droidnaskh-regular-webfont.eot');
+  src: url('../fonts/droidnaskh-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/droidnaskh-regular-webfont.woff') format('woff'),
+  url('../fonts/droidnaskh-regular-webfont.ttf') format('truetype'),
+  url('../fonts/droidnaskh-regular-webfont.svg#droid_arabic_naskhregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Droid Serif Thai';
+  src: url('../fonts/droidserifthai-regular-webfont.eot');
+  src: url('../fonts/droidserifthai-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/droidserifthai-regular-webfont.woff') format('woff'),
+  url('../fonts/droidserifthai-regular-webfont.ttf') format('truetype'),
+  url('../fonts/droidserifthai-regular-webfont.svg#droid_serif_thairegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NanumMyeongjo-Regular.eot');
+  src: url('../fonts/NanumMyeongjo-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NanumMyeongjo-Regular.woff2') format('woff2'),
+  url('../fonts/NanumMyeongjo-Regular.woff') format('woff'),
+  url('../fonts/NanumMyeongjo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('../fonts/pt_serif-web-regular-webfont.eot');
+  src: url('../fonts/pt_serif-web-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pt_serif-web-regular-webfont.woff') format('woff'),
+  url('../fonts/pt_serif-web-regular-webfont.ttf') format('truetype'),
+  url('../fonts/pt_serif-web-regular-webfont.svg#pt_serifregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+
+  .x_small & {
+    font-size: $size * 0.85;
+  }
+
+  .xx_small & {
+    font-size: $size * 0.7;
+  }
+
+}

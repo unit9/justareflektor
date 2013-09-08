@@ -1,0 +1,751 @@
+{
+    "common": {
+        "shaders/common/vertex.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/common/vertexinv.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/common/pass.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        }
+    },
+    "renderer": {
+        "shaders/renderer/textureNoise.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/renderer/textureNoiseOverlay.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/renderer/textureNoiseSides.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/renderer/textureNoiseSides.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/interface/sides.png": {
+            "type": "texture",
+            "filesize": "0.0277"
+        },
+
+        "media/images/noise/noise_ps_gray_1/noise_couleur0.jpg": {
+            "type": "texture",
+            "filesize": "0.0277"
+        },
+        "media/images/noise/noise_ps_gray_1/noise_couleur1.jpg": {
+            "type": "texture",
+            "filesize": "0.0277"
+        },
+        "media/images/noise/noise_ps_gray_1/noise_couleur2.jpg": {
+            "type": "texture",
+            "filesize": "0.0277"
+        }
+
+    },
+    "deformmask": {
+        "media/video/{size}/reflektor_1.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/images/mask_encre_scene0/mask_encre0.jpg": {
+            "type": "texture",
+            "filesize": "0.0296"
+        },
+        "media/images/mask_encre_scene0/mask_encre1.jpg": {
+            "type": "texture",
+            "filesize": "0.0298"
+        },
+        "media/images/mask_encre_scene0/mask_encre2.jpg": {
+            "type": "texture",
+            "filesize": "0.0302"
+        },
+        "media/images/mask_encre_scene0/mask_encre3.jpg": {
+            "type": "texture",
+            "filesize": "0.0298"
+        },
+        "media/images/mask_encre_scene0/mask_encre4.jpg": {
+            "type": "texture",
+            "filesize": "0.0301"
+        },
+        "media/images/mask_encre_scene0/mask_encre5.jpg": {
+            "type": "texture",
+            "filesize": "0.0296"
+        },
+        "media/images/mask_encre_scene0/mask_encre6.jpg": {
+            "type": "texture",
+            "filesize": "0.0294"
+        },
+        "media/images/mask_encre_scene0/mask_encre7.jpg": {
+            "type": "texture",
+            "filesize": "0.0304"
+        },
+        "media/images/mask_encre_scene0/mask_encre8.jpg": {
+            "type": "texture",
+            "filesize": "0.0293"
+        },
+        "media/images/mask_encre_scene0/mask_encre9.jpg": {
+            "type": "texture",
+            "filesize": "0.0303"
+        },
+        "media/images/mask_encre_scene0/mask_encre10.jpg": {
+            "type": "texture",
+            "filesize": "0.0297"
+        },
+
+        "shaders/deformmask/revealExposure.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/lightGlow.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/distMix.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+
+        "shaders/deformmask/godrays.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/chromaticdiff.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/beam.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/beamspill.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/rgb2luma.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingLumaBlur.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/refractiveLight.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/lightRays.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/add.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingGodRays.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/raysAccumulation.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/lightRays2.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingAdaptiveFeedback.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingVertices.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingVideoFeedback.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/addDrawing.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/vertexRatio.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingDirection.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingFeedbackRadial2.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/deformmask/drawingFeedbackRadial.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        }
+    },
+
+    "opticalfeedback": {
+        "media/video/{size}/reflektor_2.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "shaders/opticalfeedback/alphaExtraction.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/alphaExtraction.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/diffuseExtraction.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/chromaticdiff.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/chromaticmid.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/chromaticraw.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/deformRadialMultiChromatic.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/opticalfeedback/refractionRadial.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/encre/texture_encre0.jpg": {
+            "type": "texture",
+            "filesize": "0.3462"
+        },
+        "media/images/encre/texture_encre1.jpg": {
+            "type": "texture",
+            "filesize": "0.3189"
+        },
+        "media/images/encre/texture_encre2.jpg": {
+            "type": "texture",
+            "filesize": "0.3084"
+        },
+        "media/images/encre/texture_encre4.jpg": {
+            "type": "texture",
+            "filesize": "0.3245"
+        },
+        "media/images/encre/texture_encre5.jpg": {
+            "type": "texture",
+            "filesize": "0.2958"
+        },
+        "media/images/encre/texture_encre6.jpg": {
+            "type": "texture",
+            "filesize": "0.1955"
+        },
+        "media/images/encre/texture_encre7.jpg": {
+            "type": "texture",
+            "filesize": "0.2458"
+        },
+        "media/images/encre/texture_encre8.jpg": {
+            "type": "texture",
+            "filesize": "0.3713"
+        }
+    },
+    "lanme": {
+        "media/video/{size}/reflektor_3.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "shaders/lanme/drawingBlurDirection.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/drawingBlurDirection.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/drawingBlurSize.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/drawingSine.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/EdgeBlurCompositeTime.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/EdgeBlurCompositeTime.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/lanme/chromadiffDirectionStatic.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        }
+    },
+    "videogrid": {
+        "media/video/{size}/reflektor_4.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/tracking/videogrid.json": {
+            "type": "json",
+            "filesize": "2.4809"
+        },
+        "shaders/videogrid/blur.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/videogrid/blur.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/videogrid/neonLinesNoise.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/videogrid/neonLinesNoise.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/videogrid/dot_glow_L_0.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_1.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_2.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_3.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_4.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_5.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_0.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_1.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_2.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_3.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_4.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_5.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/zombies/axelle_light_beam_0.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        }
+    },
+    "feedback": {
+        "media/video/{size}/reflektor_5.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "shaders/feedback/blackAndWhite.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/feedback/linesBlurAccumulation.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        }
+    },
+    "zombies": {
+        "media/video/{size}/reflektor_6-11.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/tracking/axelle_final.json": {
+            "type": "json",
+            "filesize": "7.3250"
+        },
+        "media/tracking/zombies_final.json": {
+            "type": "json",
+            "filesize": "7.4700"
+        },
+        "media/images/noise_lumiere2.png": {
+            "type": "texture",
+            "filesize": "0.0083"
+        },
+        "shaders/zombies/linesComposite.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/zombies/linesLightRadial.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/zombies/linesCompositeNoise.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/zombies/linesAccumulation.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/zombies/flareiterations.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/zombies/axelle_light_0.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_1.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_2.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_0.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_1.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_2.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_3.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_4.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_5.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_6.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/axelle_light_beam_7.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/zombies/flare.png": {
+            "type": "texture",
+            "filesize": "0.015"
+        },
+        "media/images/videogrid/dot_glow_L_0.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_1.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_2.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_3.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_4.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_L_5.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_0.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_1.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_2.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_3.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_4.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/videogrid/dot_glow_S_5.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        }
+    },
+    "mirror": {
+        "media/video/{size}/reflektor_12-18.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/tracking/mirrorBoy.json": {
+            "type": "json",
+            "filesize": "0.012"
+        },
+        "media/images/gradient_miroir.png": {
+            "type": "texture",
+            "filesize": "0.001"
+        },
+        "media/images/noise_lumiere1.png": {
+            "type": "texture",
+            "filesize": "0.0012"
+        },
+        "shaders/mirror/diffuseExtraction.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/diffuseExtraction.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/directionExtraction.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/lightRaysPalette.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/mirrorMask.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/mirrorMask.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/mirrorMaskMultiply.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/SimpleAdditive.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/mirror/simpleFoil.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        }
+    },
+    "brokenmirror": {
+        "media/video/{size}/reflektor_19.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/images/brokenmirror/mirror_diffuse.jpg": {
+            "type": "texture",
+            "filesize": "0.1461"
+        },
+        "media/images/brokenmirror/mirror_edges_and_dust.jpg": {
+            "type": "texture",
+            "filesize": "0.1062"
+        },
+        "media/images/brokenmirror/mirror_mask.png": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+        "media/images/brokenmirror/mirror_light.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+
+
+        "shaders/brokenmirror/brokenmirror.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/brokenmirror/brokenmirror.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/brokenmirror/brokenmirrorMask.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/brokenmirror/brokenmirrorMask.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/brokenmirror/lightRays.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/brokenmirror/lightRays.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/noise_lumiere1.png": {
+            "type": "texture",
+            "filesize": "0.0012"
+        },
+
+
+        "media/images/brokenmirror/glitch4/noise_1.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+        "media/images/brokenmirror/glitch4/noise_2.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+        "media/images/brokenmirror/glitch4/noise_3.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        }
+    },
+    "finale": {
+        "media/video/{size}/reflektor_end.{extension}": {
+            "type": "video",
+            "filesize": 1,
+            "loopStart": 0,
+            "loopEnd": -1
+        },
+        "media/images/break_free.png": {
+            "type": "texture",
+            "filesize": "0.250"
+        },
+        "shaders/finale/breakFreeNoiseFS.vert": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/finale/breakFreeNoiseFS.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "shaders/finale/lightRays.frag": {
+            "type": "shader",
+            "filesize": "0.0001"
+        },
+        "media/images/noise_lumiere1.png": {
+            "type": "texture",
+            "filesize": "0.0012"
+        },
+
+
+        "media/images/brokenmirror/glitch4/noise_1.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+        "media/images/brokenmirror/glitch4/noise_2.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        },
+        "media/images/brokenmirror/glitch4/noise_3.jpg": {
+            "type": "texture",
+            "filesize": "0.4374"
+        }
+    },
+    "webcamcontrol": {
+        "media/images/mask_encre_scene0/mask_encre0.jpg": {
+            "type": "texture",
+            "filesize": "0.0296"
+        },
+        "media/images/mask_encre_scene0/mask_encre1.jpg": {
+            "type": "texture",
+            "filesize": "0.0298"
+        },
+        "media/images/mask_encre_scene0/mask_encre2.jpg": {
+            "type": "texture",
+            "filesize": "0.0302"
+        },
+        "media/images/mask_encre_scene0/mask_encre3.jpg": {
+            "type": "texture",
+            "filesize": "0.0298"
+        },
+        "media/images/mask_encre_scene0/mask_encre4.jpg": {
+            "type": "texture",
+            "filesize": "0.0301"
+        },
+        "media/images/mask_encre_scene0/mask_encre5.jpg": {
+            "type": "texture",
+            "filesize": "0.0296"
+        },
+        "media/images/mask_encre_scene0/mask_encre6.jpg": {
+            "type": "texture",
+            "filesize": "0.0294"
+        },
+        "media/images/mask_encre_scene0/mask_encre7.jpg": {
+            "type": "texture",
+            "filesize": "0.0304"
+        },
+        "media/images/mask_encre_scene0/mask_encre8.jpg": {
+            "type": "texture",
+            "filesize": "0.0293"
+        },
+        "media/images/mask_encre_scene0/mask_encre9.jpg": {
+            "type": "texture",
+            "filesize": "0.0303"
+        },
+        "media/images/mask_encre_scene0/mask_encre10.jpg": {
+            "type": "texture",
+            "filesize": "0.0297"
+        }
+    }
+}

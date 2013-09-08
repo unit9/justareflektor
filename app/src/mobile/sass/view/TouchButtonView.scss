@@ -1,0 +1,134 @@
+section.TouchButtonView {
+
+  @extend %PageView;
+
+  z-index:10;
+
+  button.touch {
+
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 135px;
+    font-family: inherit;
+    z-index: 999;
+
+    @media screen and (min-aspect-ratio: 13/9) {
+      &.left {
+        width: 135px;
+        height: 100%;
+        left: 0;
+        bottom: auto;
+      }
+
+      &.right {
+        width: 135px;
+        height: 100%;
+        right: 0;
+        bottom: auto;
+      }
+    }
+
+    .up, .over, .blocker {
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      -webkit-user-select: none !important;
+      -khtml-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-user-callout: none !important;
+      -webkit-touch-callout: none !important;
+      @include transition-property(opacity);
+      @include transition-duration(0.4s);
+
+    }
+
+    .blocker {
+
+      background-color: black;
+      z-index: 2;
+      @include opacity(0.01);
+
+    }
+
+    .up {
+      display: table;
+      @include opacity(1);
+      background-color: $heroRedColor;
+      @include font-size(24px);
+      //padding-top: 35px;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    .over {
+
+      @include opacity(0);
+      background-color: black;
+
+    }
+
+    &.inactive {
+      .up {
+        @include opacity(1);
+        background-color: #0d0d0d;
+        color: #FFF;
+
+      }
+
+    }
+
+    &.over {
+
+      .up {
+
+        @include opacity(0);
+
+      }
+
+      .over {
+
+        //@include opacity(1);
+
+      }
+
+    }
+
+  }
+
+  .debug {
+
+    //display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 24px;
+    background-color: #333333;
+    z-index: 9999;
+
+    .debug & {
+
+      display: block;
+
+    }
+
+    .time {
+
+      color: white;
+      margin-left: 4px;
+      margin-top: 4px;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: normal 20px/40px helvetica, arial, sans-serif;
+  color: #333;
+  background: #efefef; }
+
+#drop-zone, #output textarea {
+  position: relative;
+  display: block;
+  width: 1000px;
+  height: 500px;
+  margin: 50px auto;
+  border: 1px solid #666666; }
+  #drop-zone p, #output textarea p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -20px;
+    text-align: center; }
+
+#drop-zone {
+  box-shadow: inset 0 0 200px #999999; }

@@ -1,0 +1,54 @@
+section.EndScreenView {
+
+  $endScreenViewWidth: 300px;
+  $endScreenViewHeight: 95px;
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $endScreenViewWidth;
+    height: $endScreenViewHeight;
+    margin-left: -$endScreenViewWidth * 0.5;
+    margin-top: -$endScreenViewHeight * 0.5;
+    text-align: center;
+
+    button {
+      @include font-size(19px);
+      color: #000;
+      font-weight: bold;      
+    }
+
+    footer {
+      
+      margin-top: 30px;
+
+      li {
+        line-height: 22px;
+        @include font-size(15px);
+        color: #FFF;
+        text-decoration: none;
+        vertical-align: bottom;
+        letter-spacing: -1px;
+        display: inline;
+
+        &.asset {
+          display: inline-block;
+          font-size: 0;
+          margin-left: 15px;
+
+          &.icon-google {
+            margin-left: 5px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

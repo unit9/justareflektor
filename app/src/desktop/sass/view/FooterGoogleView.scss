@@ -1,0 +1,48 @@
+footer.FooterGoogleView {
+
+  @extend %View;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+
+  .logo-chrome-experiment, .logo-made-with-some-friends-from-google {
+
+    display: inline-block;
+    margin-bottom: 20px;
+
+  }
+
+  .logo-chrome-experiment {
+
+    margin-left: 20px;
+
+  }
+
+  .separator {
+
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1px;
+    height: 30px;
+    margin: 0 20px;
+    margin-bottom: 25px;
+    background-color: white;
+    @include opacity(0.2);
+
+  }
+
+  .logo-made-with-some-friends-from-google {
+
+    position: relative;
+    bottom: -2px;
+
+  }
+
+  .logo-chrome-experiment {
+    position: relative;
+    bottom:-2px;
+  }
+
+}

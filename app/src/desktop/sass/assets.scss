@@ -1,0 +1,26 @@
+/**
+ * @author Maciej Zasada maciej@unit9.com
+ */
+
+@import "compass/css3/images";
+
+/* BEGIN SETTINGS SECTION */
+$images-root: '../img/';
+$asset: 'asset';
+$sprite: 'sprite';
+$image: 'image';
+$desktop: 'desktop';
+$tablet: 'tablet';
+$mobile: 'mobile';
+$x1: '1x';
+$x2: '2x';
+
+$packages-sprite: 'essential', 'main';
+$platforms: $desktop, $tablet, $mobile;
+$resolutions: $x1, $x2;
+$provide-types: $image, $sprite;
+$default-to: $sprite;   // $sprite or $image
+/* END SETTINGS SECTION */
+
+/* now, generate! */
+@import "utils/_generate-assets";

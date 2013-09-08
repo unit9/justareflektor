@@ -1,0 +1,405 @@
+/**
+ * @author Maciej Zasada maciej@unit9.com
+ */
+
+@import "compass/utilities/sprites/base";
+@import "utils/detection";
+
+$maps: ();
+$map-names: ();
+$map-urls: ();
+
+/**
+ * Defines root asset class
+ */
+.#{$asset} {
+
+  display: block;
+
+}
+
+/**
+ * Returns sprite map given package name, platform and resolution.
+ * @param $package package name
+ * @param $platform platform name [$desktop | $tablet | $mobile]
+ * @param $resolution resolution type [$x1 | $x2]
+ */
+@function get-map($package, $platform, $resolution) {
+
+  $map-index: 0;
+  $current-index: 1;
+
+  @each $map-name in $map-names {
+
+    @if($map-name == $package + '-' + $platform + '-' + $resolution) {
+
+      $map-index: $current-index;
+
+    }
+
+    $current-index: $current-index + 1;
+
+  }
+
+  @if($map-index == 0) {
+
+    @return false;
+
+  } @else {
+
+    @return nth($maps, $map-index);
+
+  }
+
+}
+
+/**
+ * Returns sprite map file URL given package name, platform and resolution.
+ * @param $package package name
+ * @param $platform platform name [$desktop | $tablet | $mobile]
+ * @param $resolution resolution type [$x1 | $x2]
+ */
+@function get-map-url($package, $platform, $resolution) {
+
+  $map-index: 0;
+  $current-index: 1;
+
+  @each $map-name in $map-names {
+
+    @if($map-name == $package + '-' + $platform + '-' + $resolution) {
+
+      $map-index: $current-index;
+
+    }
+
+    $current-index: $current-index + 1;
+
+  }
+
+  @if($map-index == 0) {
+
+    @return false;
+
+  } @else {
+
+    @return nth($map-urls, $map-index);
+
+  }
+
+}
+
+/**
+ * Returns true if output type ($type) is supported.
+ * @param $type [$image | $sprite]
+ */
+@function supports-type($type) {
+
+  @if(length($provide-types) > 1) {
+
+    @return nth($provide-types, 1) == $type or nth($provide-types, 2) == $type;
+
+  } @else {
+
+    @if(length($provide-types) == 1) {
+
+      @return nth($provide-types, 1) == $type;
+
+    } @else {
+
+      @return false;
+
+    }
+
+  }
+
+}
+
+/**
+ * Generates styles for a sprite asset.
+ * @param $package package name
+ * @param $platform platform name [$desktop | $tablet | $mobile]
+ * @param $resolution resolution type [$x1 | $x2]
+ * @param $asset-name asset file name
+ */
+@mixin sprite-with-dimensions($package, $platform, $resolution, $asset-name) {
+
+  $map: get-map($package, $platform, $resolution);
+  $url: get-map-url($package, $platform, $resolution);
+  $map-name: $package + '-' + $platform + '-' + $resolution;
+  @include background($url);
+
+  @if($resolution == $x2) {
+
+    $original-sprite-position: sprite-position($map, $asset-name);
+    $original-sprite-width: image-width(sprite-file($map, $asset-name));
+    $original-sprite-height: image-height(sprite-file($map, $asset-name));
+    $scaled-sprite-width: $original-sprite-width * 0.5;
+    $scaled-sprite-height: $original-sprite-height * 0.5;
+    $original-map-width: image-width(sprite-path($map));
+    $original-map-height: image-height(sprite-path($map));
+    $scaled-map-width: $original-map-width * 0.5;
+    $scaled-map-height: $original-map-height * 0.5;
+
+    width: $scaled-sprite-width;
+    height: $scaled-sprite-height;
+    background-position: nth($original-sprite-position, 1) * 0.5 nth($original-sprite-position, 2) * 0.5;
+    background-size: $scaled-map-width $scaled-map-height;
+
+  } @else {
+
+    @include sprite-dimensions($map, $asset-name);
+    background-position: sprite-position($map, $asset-name);
+
+  }
+
+}
+
+/**
+ * Generates styles for an image asset.
+ * @param $package package name
+ * @param $platform platform name [$desktop | $tablet | $mobile]
+ * @param $resolution resolution type [$x1 | $x2]
+ * @param $asset-name asset file name
+ */
+@mixin image-with-dimensions($package, $platform, $resolution, $asset-name, $extension: '.png') {
+
+  $url: $images-root + $package + '/' + $platform + '/' + $package + '-' + $platform + '-' + $resolution + '/' + $asset-name + $extension;
+
+  background: url($url) no-repeat;
+
+  @if($resolution == $x2) {
+
+    $width: image-width($url) * 0.5;
+    $height: image-height($url) * 0.5;
+    width: $width;
+    height: $height;
+    background-size: $width $height;
+
+  } @else {
+
+    width: image-width($url);
+    height: image-height($url);
+
+  }
+
+}
+
+/**
+ * Generates responsive sprite class definition for all possible device types.
+ * @param $package package name
+ * @param $asset-name asset file name
+ */
+@mixin sprite-responsive($package, $asset-name) {
+
+  @include sprite-with-dimensions($package, $desktop, $x1, $asset-name);
+
+  @include retina {
+
+    @include sprite-with-dimensions($package, $desktop, $x2, $asset-name);
+
+  }
+
+  @include tablet {
+
+    @include sprite-with-dimensions($package, $tablet, $x1, $asset-name);
+
+    @include retina {
+
+      @include sprite-with-dimensions($package, $tablet, $x2, $asset-name);
+
+    }
+
+  }
+
+  @include mobile {
+
+    @include sprite-with-dimensions($package, $mobile, $x1, $asset-name);
+
+    @include retina {
+
+      @include sprite-with-dimensions($package, $mobile, $x2, $asset-name);
+
+    }
+
+  }
+
+}
+
+/**
+ * Generates responsive image class definition for all possible device types.
+ * @param $package package name
+ * @param $asset-name asset file name
+ */
+@mixin image-responsive($package, $asset-name, $extension: '.png') {
+
+  @include image-with-dimensions($package, $desktop, $x1, $asset-name, $extension);
+
+  @include retina {
+
+    @include image-with-dimensions($package, $desktop, $x2, $asset-name, $extension);
+
+  }
+
+  @include tablet {
+
+    @include image-with-dimensions($package, $tablet, $x1, $asset-name, $extension);
+
+    @include retina {
+
+      @include image-with-dimensions($package, $tablet, $x2, $asset-name, $extension);
+
+    }
+
+  }
+
+  @include mobile {
+
+    @include image-with-dimensions($package, $mobile, $x1, $asset-name, $extension);
+
+    @include retina {
+
+      @include image-with-dimensions($package, $mobile, $x2, $asset-name, $extension);
+
+    }
+
+  }
+
+}
+
+/**
+ * Generates responsive asset class definition for all possible device types with both sprite and image support.
+ * @param $package package name
+ * @param $asset-name asset file name
+ */
+@mixin asset-responsive($package, $asset-name, $use-sprites: true) {
+
+  .#{$asset}.#{$asset-name} {
+
+    @if($use-sprites and $default-to == $sprite and supports-type($sprite)) {
+
+      @include sprite-responsive($package, $asset-name);
+
+      @if(supports-type($image)) {
+
+        &.image {
+
+          @include image-responsive($package, $asset-name);
+
+        }
+
+      }
+
+    } @else {
+
+      @if($use-sprites == false or ($default-to == $image and supports-type($image))) {
+
+        @include image-responsive($package, $asset-name, '.jpg');
+
+        @if($use-sprites and supports-type($sprite)) {
+
+          &.sprite {
+
+            @include sprite-responsive($package, $asset-name);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/**
+ * Generates sprite maps for images found in the project.
+ */
+@each $package in $packages-sprite {
+
+  @each $platform in $platforms {
+
+    @each $resolution in $resolutions {
+
+      $map-name: $package + '-' + $platform + '-' + $resolution;
+      $path: $images-root + $package + '/' + $platform + '/' + $map-name + '/*.png';
+      $files: listFiles($path, true);
+
+      @if length($files) > 0 {
+
+        $map: sprite-map($path);
+        $sprite-url: sprite-url($map);
+        $maps: append($maps, $map);
+        $map-names: append($map-names, $map-name);
+        $map-urls: append($map-urls, $sprite-url);
+
+      }
+
+    }
+
+  }
+
+  .detection .url-#{$package} {
+
+    display: none;
+    content: get-map-url($package, $desktop, $x1);
+
+    @include retina {
+
+      content: get-map-url($package, $desktop, $x2);
+
+    }
+
+    @include mobile {
+
+      content: get-map-url($package, $mobile, $x1);
+
+      @include retina {
+
+        content: get-map-url($package, $mobile, $x2);
+
+      }
+
+    }
+
+    @include tablet {
+
+      content: get-map-url($package, $tablet, $x1);
+
+      @include tablet {
+
+        content: get-map-url($package, $tablet, $x2);
+
+      }
+
+    }
+
+  }
+
+}
+
+/**
+ * Generates responsive asset classes for all images found in the project using sprites (and fallback with individual assets).
+ */
+@each $package in $packages-sprite {
+
+  $path-png: $images-root + $package + '/' + nth($platforms, 1) + '/' + $package + '-' + nth($platforms, 1) + '-' + nth($resolutions, 1) + '/*.png';
+  $pngs: listFiles($path-png, true);
+
+  $path-jpg: $images-root + $package + '/' + nth($platforms, 1) + '/' + $package + '-' + nth($platforms, 1) + '-' + nth($resolutions, 1) + '/*.jpg';
+  $jpgs: listFiles($path-jpg, true);
+
+  @each $asset in $pngs {
+
+    @include asset-responsive($package, $asset);
+
+  }
+
+  @each $asset in $jpgs {
+
+    @include asset-responsive($package, $asset, false);
+
+  }
+
+}

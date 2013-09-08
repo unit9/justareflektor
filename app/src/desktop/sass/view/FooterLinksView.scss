@@ -1,0 +1,151 @@
+@import "compass/typography/lists/horizontal-list";
+@import "compass/css3";
+
+footer.FooterLinksView {
+
+  @extend %View;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  margin-bottom: 18px;
+  margin-right: 20px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .os-Mac.browser-Firefox & {
+
+    letter-spacing: 0px;
+
+  }
+
+  nav {
+
+    @include horizontal-list;
+
+    color: white;
+    display: inline-block;
+    margin-bottom: -5px;
+
+    li {
+
+      margin-right: -3px;
+      margin-top: 2px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+
+      &:after {
+        border-right: 2px solid rgba(255, 255, 255, 0.7);
+        content: '';
+        height: 15px;
+        margin-left: 5px;
+        margin-right: 0px;
+      }
+
+      &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)  {
+        padding-left: 0px;
+        padding-right: 2px;
+        &:after {
+          border: none;
+        }
+      }
+
+    }
+
+
+
+    button {
+
+      @extend button.fade-over;
+
+      &.fullscreen {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        margin-top: 4px;
+
+        .os-Mac.lng-jp &, .os-Mac.lng-zh &, .os-Mac.lng-zh-cn &, .os-Mac.lng-zh-tw &, .os-Mac.lng-zh-hk &, .os-Mac.lng-ar & {
+          margin-top: 1px;
+        }
+
+        &:hover {
+          @include opacity(1);
+        }
+
+        div {
+          top: 0;
+        }
+      }
+
+    }
+
+    button, li {
+
+      font-family: 'Crimson Text', serif;
+      @include font-size(13px);
+      color: white !important;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+
+      &.static {
+        -webkit-transition: none;
+        padding-left: 4px;
+        cursor: default;
+        &:hover {
+          -webkit-transition: none;
+          opacity: 1;
+          cursor: default;
+        }
+      }
+    }
+
+
+    li.button {
+
+      margin-top: 1px;
+      height: 20px;
+
+      .os-Mac.lng-jp &, .os-Mac.lng-zh &, .os-Mac.lng-zh-cn &, .os-Mac.lng-zh-tw &, .os-Mac.lng-zh-hk &, .os-Mac.lng-ar & {
+        margin-top: 4px;
+      }
+
+      &.google {
+
+        margin-left: -7px;
+
+      }
+
+      &.fs {
+
+        position: relative;
+        top: -1px;
+
+      }
+
+    }
+
+  }
+
+  select {
+
+    position: relative;
+    top: -1px;
+    width: 110px;
+    display: inline-block;
+    margin-right: 10px;
+
+    .os-Mac.lng-jp &, .os-Mac.lng-zh &, .os-Mac.lng-zh-cn &, .os-Mac.lng-zh-tw &, .os-Mac.lng-zh-hk &, .os-Mac.lng-ar & {
+      position: relative;
+      top: -2px;
+    }
+
+  }
+
+}

@@ -1,0 +1,37 @@
+section.ExperienceLoadingView {
+
+  @extend %PageView;
+
+  $experienceLoadingViewWidth: 300px;
+  $experienceLoadingViewHeight: 60px;
+
+  @include opacity(0); // we don't want to show anything as the ControllerView overlays it during loading anyway
+  opacity: 0 !important;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $experienceLoadingViewWidth;
+    height: $experienceLoadingViewHeight;
+    margin-left: -$experienceLoadingViewWidth * 0.5;
+    margin-top: -$experienceLoadingViewHeight * 0.5;
+    text-align: center;
+
+    .progress {
+
+      @include font-size(32px);
+
+    }
+
+    .title {
+
+      @include font-size(16px);
+      margin-top: 10px;
+
+    }
+
+  }
+
+}

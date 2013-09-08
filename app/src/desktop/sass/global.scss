@@ -1,0 +1,243 @@
+@import "compass/typography/lists/horizontal-list";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+@import "utils/states";
+
+$heroRedColor: #ff3f3f;
+
+* {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+}
+
+i {
+  font-style:italic;
+}
+
+#stats {
+  z-index: 9999;
+}
+
+.dg.ac {
+  z-index: 9999 !important;
+}
+
+.code-loader {
+
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  img {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+
+  }
+
+}
+
+body {
+
+  overflow: hidden;
+  background-color: black;
+  -webkit-touch-callout: none !important;
+
+  .main > section {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+  }
+
+  >.main {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Crimson Roman Full', serif;
+    @include font-size(11px);
+    letter-spacing: 2px;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+    .lng-en &, .lng-en-us &, .lng-en-gb & {
+
+      font-family: 'Crimson Roman', serif;
+
+    }
+
+    .lng-ar & {
+
+      font-family: 'Droid Arabic Naskh';
+
+    }
+
+    .lng-th & {
+
+      font-family: 'Droid Serif Thai';
+
+    }
+
+    .lng-ko & {
+
+      font-family: 'Nanum Myeongjo';
+
+    }
+
+    .lng-ru &, .lng-cs & {
+
+      //font-family: 'PT Serif';
+
+    }
+
+    .lng-zh &, .lng-zh-cn &, .lng-zh-tw &, .lng-zh-hk & {
+
+      //font-family: serif;
+
+    }
+
+  }
+
+}
+
+a {
+  color: inherit;
+}
+
+aside.preload {
+
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+
+}
+aside.preload video, aside.preload div{
+  width: 0;
+  height: 0;
+}
+
+button {
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  @include font-size(17px);
+  @include border-radius(2px);
+
+  &.fade-over, {
+
+    @include opacity(1);
+
+    &:hover {
+
+      @include opacity(0.5);
+
+    }
+
+  }
+
+  &.box {
+
+    padding: 2px 12px 2px 12px;
+    color: black;
+    background-color: white;
+
+    &:hover {
+
+      background-color: $heroRedColor;
+
+    }
+
+  }
+
+  &.transition {
+
+    @include transition-property(background-color);
+    @include transition-duration(0.3s);
+
+  }
+
+}
+
+.webcam-arrow {
+
+  position: absolute;
+  top: 10px;
+  right: 32px;
+  background: url(../img/main/desktop/main-desktop-1x/webcam-arrow.gif);
+  width: 45px;
+  height: 82px;
+
+  .browser-Firefox & {
+
+    top: 170px;
+    left: 280px;
+    right: auto;
+
+  }
+
+  .os-Windows.browser-Chrome &, .os-Linux.browser-Chrome & {
+
+    left: 467px;
+    right: auto;
+
+  }
+
+}
+
+.mouse-mode, .mouse-mode-camera {
+
+  position: absolute;
+  letter-spacing: 2px;
+  @include font-size(12px);
+  color: #FFF;
+
+  a {
+
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+
+      @include opacity(0.5);
+
+    }
+
+  }
+
+  .mode-mouse & {
+
+    display: none;
+
+  }
+
+}
+
+#code-debug {
+
+  font-family: monospace;
+  position:fixed;
+  top:0;
+  right:0;
+  background-color:white;
+  @include font-size(20px);
+  color: red;
+  border: 3px solid red;
+  padding: 5px;
+
+}

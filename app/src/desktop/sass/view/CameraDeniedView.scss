@@ -1,0 +1,41 @@
+section.CameraDeniedView {
+
+  @extend %PageView;
+  background-color: black;
+
+  .content {
+
+    position: absolute;
+    width: 700px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -100px;
+    text-align: center;
+
+    .title {
+
+      @include font-size(30px);
+
+    }
+
+    .message {
+
+      a {
+
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+
+          @include opacity(0.5);
+
+        }
+
+      }
+
+    }
+
+  }
+}

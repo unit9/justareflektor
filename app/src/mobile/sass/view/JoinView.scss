@@ -1,0 +1,34 @@
+section.JoinView {
+
+  $joinViewWidth: 300px;
+  $joinViewHeight: 20px;
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $joinViewWidth;
+    height: $joinViewHeight;
+    margin-left: -$joinViewWidth * 0.5;
+    margin-top: -$joinViewHeight * 0.5;
+    text-align: center;
+    font-size: 28px;
+
+    .loader-icon {
+
+      margin-top: 40px;
+
+    }
+
+    .connecting {
+
+      font-size: 28px;
+
+    }
+
+  }
+
+}

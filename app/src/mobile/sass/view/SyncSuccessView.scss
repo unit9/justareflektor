@@ -1,0 +1,54 @@
+section.SyncSuccessView {
+
+  $syncScuccessViewWidth: 300px;
+  $syncSuccessViewHeight: 20px;
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $syncScuccessViewWidth;
+    height: $syncSuccessViewHeight;
+    margin-left: -$syncScuccessViewWidth * 0.5;
+    margin-top: -$syncSuccessViewHeight * 0.5;
+    text-align: center;
+
+    color: $heroRedColor;
+
+    .os-iOS.browser-Chrome & {
+      color: white;
+    }
+
+    .connected {
+
+      font-size: 28px;
+      margin-top: -16px;
+
+      &.other {
+        display: block;
+      }
+
+      &.chrome-ios {
+        display: none;
+      }
+
+      .os-iOS.browser-Chrome & {
+
+        &.other {
+          display: none;
+        }
+
+        &.chrome-ios {
+          display: block;
+        }
+
+      }
+
+    }
+
+  }
+
+}

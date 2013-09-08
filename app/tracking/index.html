@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<title>Tracking Demo</title>
+	<style>
+		/** { padding:0; margin:0; }*/
+		html, body { padding:0; margin:0; width:100%; height:100%; }
+		canvas { display:block; }
+	</style>
+</head>
+	
+	<script type="text/javascript" src="js/lib/three.min.js"></script>
+
+	<script type="text/javascript" src="js/lib/cv.js"></script>
+	<script type="text/javascript" src="js/lib/posit1.js"></script>
+	<script type="text/javascript" src="js/lib/svd.js"></script>
+	<script type="text/javascript" src="js/lib/aruco.js"></script>
+
+	<script type="text/javascript" src="js/core/CandlelightCore.js"></script>
+	<script type="text/javascript" src="js/core/utils/FramebufferWrapper.js"></script>
+	<script type="text/javascript" src="js/core/camera/Camera.js"></script>
+	<script type="text/javascript" src="js/core/utils/TextureUpdateManager.js"></script>
+	<script type="text/javascript" src="js/core/tracking/RectangleUtils.js"></script>
+	<script type="text/javascript" src="js/core/tracking/TrackingWorker.js"></script>
+	<script type="text/javascript" src="js/core/tracking/TrackingDebug.js"></script>
+	<script type="text/javascript" src="js/core/tracking/Tracking.js"></script>
+
+	<script>
+
+		//main loop
+		function loop() {
+			window.requestAnimationFrame(loop);
+			// console.log(window.candlelightcore.tracking.normalizedPosition);
+			// console.log(window.candlelightcore.tracking.rotation) //usually better with giroscope..
+		}
+
+		//add the tracking to the dom for debugging purposes
+		function enableDebugMode() {
+			window.candlelightcore.tracking.setupDebugMode();
+			window.candlelightcore.tracking.showDebugMode(document.body); //div / dom object to add the renderer to
+		}
+
+		//tracking started
+		function trackingReadyCallback() {
+			enableDebugMode();
+			loop();
+		}
+
+		//setup tracking
+		window.candlelightcore.tracking.PATH_TO_TRACKING_WORKER = 'js/core/tracking/';
+		window.candlelightcore.tracking.SHADERS_PATH = 'shaders/';
+		window.candlelightcore.tracking.setup(null,trackingReadyCallback);
+
+
+	</script>
+</html>

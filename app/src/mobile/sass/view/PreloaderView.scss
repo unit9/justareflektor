@@ -1,0 +1,17 @@
+section.PreloaderView {
+
+  @extend %PageView;
+  z-index: 200;
+  background-color: #000000;
+
+  .loader-icon {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+
+  }
+
+}

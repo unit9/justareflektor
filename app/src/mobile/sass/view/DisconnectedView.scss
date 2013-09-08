@@ -1,0 +1,38 @@
+section.DisconnectedView {
+
+  @extend %PageView;
+  background-color: black;
+
+ .page {
+    display: table;
+  }
+
+  .content {
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .title, .message {
+      width: 290px;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+
+    .title {
+
+      @include font-size(24px);
+      margin-bottom: 32px;
+      line-height: 1.3;
+
+    }
+
+    button.box {
+      @include font-size(19px);
+      color: #000;
+      font-weight: bold;
+    }
+
+  }
+
+}

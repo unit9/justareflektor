@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ copy.meta.title }}</title>
+    <meta name="description" content="{{ copy.meta.description }}" />
+    <meta name="keywords" content="af, Candlelight" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="text/plain" rel="author" href="/humans.txt" />
+
+    <base href="/">
+
+    <meta property="og:url" content="{{ url }}"/>
+    <meta property="og:image" content="{{ host }}/img/og/facebook.jpg" />
+    <meta property="og:title" content="{{ copy.meta.og.title }}" />
+    <meta property="og:description" content="{{ copy.meta.og.description }}" />
+
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple/apple-touch-icon-144x144.png" />
+
+    <link rel="stylesheet" href="m/css/screen.css" />
+    <link rel="stylesheet" href="m/css/assets.css" />
+
+</head>
+
+<body>
+
+    <aside class="code-loader">
+        <img src="img/essential/ajax-loader.gif" />
+    </aside>
+
+    <div class="main">
+
+        <section class="PreloaderView shown"></section>
+        <section class="LandingPageView"></section>
+        <section class="JoinView"></section>
+        <section class="ExperienceEmptyView"></section>
+        <section class="ExperienceFullView"></section>
+        <section class="ConnectionTimeoutView"></section>
+        <section class="SyncSuccessView"></section>
+        <section class="ExperienceLoadingView"></section>
+        <section class="DisconnectedView"></section>
+        <section class="ControllerView"></section>
+        <section class="TouchButtonView"></section>        
+        <section class="EndScreenView"></section>
+        <section class="AboutView"></section>
+
+        <section class="AxelleVideoView"></section>
+        <section class="TurnItBackView"></section>
+
+        <section class="PlatformNotSupportedView"></section>
+
+    </div>
+
+    <aside class="detection">
+
+        <div class="desktop"></div>
+        <div class="tablet"></div>
+        <div class="mobile"></div>
+        <div class="large"></div>
+        <div class="display-normal"></div>
+        <div class="display-retina"></div>
+        <div class="url-main"></div>
+
+    </aside>
+
+    <aside class="preload"></aside>
+
+    <script>
+        var LANGUAGE = '{{language}}';
+    </script>
+
+    <!--
+    * Main script
+    * Loaded asynchronously to allow content to show up before the logic executes.
+     -->
+    <script src="m/js/main.js"></script>
+
+</body>
+
+</html>

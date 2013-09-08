@@ -1,0 +1,32 @@
+section.PlatformNotSupportedView {
+
+  $platformNotSupportedViewWidth: 700px;
+  $platformNotSupportedViewHeight: 100px;
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $platformNotSupportedViewWidth;
+    height: $platformNotSupportedViewHeight;
+    margin-left: -$platformNotSupportedViewWidth * 0.5;
+    margin-top: -$platformNotSupportedViewHeight * 0.5;
+    text-align: center;
+
+    .message {
+
+      @include font-size(15px);
+      line-height: 20px;
+      margin-top: 16px;
+    }
+
+    button {
+      display: none;
+    }
+
+  }
+
+}

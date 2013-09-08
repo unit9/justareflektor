@@ -1,0 +1,36 @@
+section.ExperienceFullView {
+
+  $experienceFullViewWidth: 300px;
+  $experienceFullViewHeight: 250px;
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $experienceFullViewWidth;
+    height: $experienceFullViewHeight;
+    margin-left: -$experienceFullViewWidth * 0.5;
+    margin-top: -$experienceFullViewHeight * 0.5;
+    text-align: center;
+
+    .title {
+
+      @include font-size(24px);
+
+    }
+
+    .subtitle {
+
+      @include font-size(12px);
+      line-height: 20px;
+      margin-top: 16px;
+      margin-bottom: 20px;
+
+    }
+
+  }
+
+}

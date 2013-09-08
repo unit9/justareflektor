@@ -1,0 +1,69 @@
+{
+
+    "timeline": [
+        {
+        	"id": "deformmask",
+        	"settings": {
+                "drawingSize": 0.35,
+                "drawingSizeRays": 0.9
+        	}
+        },
+
+        {
+        	"id": "opticalfeedback",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "lanme",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "videogrid",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "feedback",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "zombies",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "mirror",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "brokenmirror",
+        	"settings": {
+        	}
+        },
+
+        {
+        	"id": "finale",
+        	"settings": {}
+        },
+
+        {
+            "id": "axelle",
+            "ignore": true
+        },
+
+        {
+            "id": "turnitback",
+            "ignore": true
+        }
+    ]
+}

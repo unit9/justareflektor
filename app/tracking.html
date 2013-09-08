@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Tracking Debugging</title>
+    <meta name="description" content="{{ copy.meta.description }}" />
+    <meta name="keywords" content="af, Candlelight" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    
+    <base href="/">
+
+    <meta property="og:url" content="http://arcade-fire.appspot.com"/>
+    <meta property="og:image" content="http://arcade-fire.appspot.com/img/og/facebook.jpg" />
+    <meta property="og:title" content="{{ copy.meta.og.title }}" />
+    <meta property="og:description" content="{{ copy.meta.og.description }}" />
+
+    <link rel="apple-touch-icon" href="img/apple/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple/apple-touch-icon-144x144.png" />
+
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="css/assets.css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/lib/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <script type="text/javascript" src="src/desktop/js/lib/compatibility.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/CSSPlugin.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/EasePack.min.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/jquery-2.0.0.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/oo.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/stats.min.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/three.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/TweenLite.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/dat.gui.min.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/perlin.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/handlebars.runtime.js"></script>
+    <script type="text/javascript" src="src/desktop/js/lib/TimelineMerge.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/globals.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/EventDispatcher.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/StateDrive.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/Channel.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/SocketChannel.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/RTCChannel.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/SocketMultiplexer.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/Peers.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/Node.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/compute_engine/mesh/Mesh.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/tailbone/clocksync/clocksync.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/config/ConfigCommon.js"></script>
+    <script type="text/javascript" src="src/desktop/js/config/ConfigDev.js"></script>
+    <script type="text/javascript" src="src/desktop/js/config/ConfigLocal.js"></script>
+    <script type="text/javascript" src="src/desktop/js/config/ConfigProd.js"></script>
+    <script type="text/javascript" src="src/desktop/js/config/ConfigTest.js"></script>
+    <script type="text/javascript" src="src/desktop/js/config/Config.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/worker/lib/aruco.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/lib/cv.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/lib/posit1.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/lib/svd.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/lib/jsfeat.min.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/RectangleUtils.js"></script>
+    <script type="text/javascript" src="src/desktop/js/worker/TrackingWorker.js"></script>
+    <script type="text/javascript" src="src/desktop/js/tracking/Tracking.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/controller/RemoteController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/AnimationController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/PerformanceController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/CameraController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/DetectionController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/InputController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/OrientationController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/TextureUpdateController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/TrackingController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/TrackingDebug.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/RemoteController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/RendererController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/AssetsController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/TimelineController.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/controller/PreloadController.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/multimedia/Player.js"></script>
+
+
+    <script type="text/javascript" src="src/desktop/js/task/Task.js"></script>
+    <script type="text/javascript" src="src/desktop/js/task/XHRPreloadTask.js"></script>
+    <script type="text/javascript" src="src/desktop/js/task/TexturePreloadTask.js"></script>
+    <script type="text/javascript" src="src/desktop/js/task/SequencePreloadTask.js"></script>
+    <script type="text/javascript" src="src/desktop/js/task/MediaPreloadTask.js"></script>
+    <script type="text/javascript" src="src/desktop/js/task/ExperiencePreloadTask.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/model/FramebufferWrapper.js"></script>
+    <script type="text/javascript" src="src/desktop/js/model/Resource.js"></script>
+    <script type="text/javascript" src="src/desktop/js/model/VideoTexture.js"></script>
+
+
+
+    <script type="text/javascript" src="src/desktop/js/view/View.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/RoutingControllerBase.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/RoutingController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/controller/ViewController.js"></script>
+    <script type="text/javascript" src="src/desktop/js/view/WebcamControlView.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/tracking/TrackingDebugView.js"></script>
+
+    <script type="text/javascript" src="src/desktop/js/dev/TrackingMotionDetection.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/TrackingMotionDetectionDebug.js"></script>
+
+
+    <script type="text/javascript" src="src/desktop/js/dev/PositView.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/LocalAutoConnectSocket.js"></script>
+    <script type="text/javascript" src="src/desktop/js/dev/StandaloneTracking.js"></script>
+
+</body>
+
+</html>

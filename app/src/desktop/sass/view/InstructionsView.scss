@@ -1,0 +1,47 @@
+section.InstructionsView {
+
+  @extend %PageView;
+
+  $instructionsViewWidth: 700px;
+  $instructionsViewHeight: 500px;
+
+  .content {
+
+    position: absolute;
+    width: $instructionsViewWidth;
+    height: $instructionsViewHeight;
+    left: 50%;
+    top: 50%;
+    margin-left: -$instructionsViewWidth * 0.5;
+    margin-top: -$instructionsViewHeight * 0.5;
+    text-align: center;
+
+    .instructions-projector {
+
+      margin: 0 auto;
+
+    }
+
+    .instructions {
+
+      @include font-size(17px);
+      letter-spacing: 1px;
+      line-height: 25px;
+      margin-top: 30px;
+
+    }
+
+  }
+
+  .mouse-mode-camera {
+
+    left: 50%;
+    bottom: 22px;
+    width: 700px;
+    margin-left: -350px;
+    text-align: center;
+    font-size: 15px;
+
+  }
+
+}

@@ -1,0 +1,182 @@
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+
+$hovers: true;
+$onoff: true;
+
+/**
+ * Hovers
+ * @example
+ *  <button class="my-button hover transition">
+ *    <div class="asset my-button-asset out"></div>
+ *    <div class="asset my-button-asset-over over"></div>
+ *  </button>
+ */
+@if($hovers) {
+
+  .hover {
+
+    &.transition {
+
+      .out, .over {
+
+        @include transition-property(opacity);
+        @include transition-duration(0.3s);
+
+      }
+
+    }
+
+    .out {
+
+      position: absolute;
+      @include opacity(1);
+
+    }
+
+    .over {
+
+      position: absolute;
+      @include opacity(0);
+
+    }
+
+    @if($onoff) {
+
+      &.onoff {
+
+        .over {
+
+          @include opacity(0);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .hover:hover {
+
+    .out {
+
+      @include opacity(0);
+
+    }
+
+    .over {
+
+      @include opacity(1);
+
+    }
+
+  }
+
+}
+
+/**
+ * OnOff
+ * @example
+ *  <button class="my-button onoff transition on">
+ *    <div class="asset my-button-asset-on on"></div>
+ *    <div class="asset my-button-asset-off off"></div>
+ *  </button>
+ *
+ * @example
+ *  <button class="my-button hover onoff transition on">
+ *    <div class="asset my-button-asset-on on out"></div>
+ *    <div class="asset my-button-asset-on-over on over"></div>
+ *    <div class="asset my-button-asset-off off out"></div>
+ *    <div class="asset my-button-asset-off-over off over"></div>
+ *  </button>
+ */
+@if($onoff) {
+
+  .onoff {
+
+    &.transition {
+
+      .on, .off {
+
+        @include transition-property(opacity);
+        @include transition-duration(0.5s);
+
+      }
+
+    }
+
+    .on {
+
+      position: absolute;
+      @include opacity(0);
+
+    }
+
+    .off {
+
+      position: absolute;
+      @include opacity(1);
+
+    }
+
+    @if($hovers) {
+
+      &.hover {
+
+        .on {
+
+          @include opacity(0);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .onoff.on {
+
+    .on {
+
+      @include opacity(1);
+
+    }
+
+    .off {
+
+      @include opacity(0);
+      opacity: 0 !important;
+
+    }
+
+    &.hover {
+
+      .off, .over {
+
+        @include opacity(0);
+
+      }
+
+      &:hover {
+
+        .over {
+
+          @include opacity(1);
+
+        }
+
+        .out {
+
+          @include opacity(0);
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

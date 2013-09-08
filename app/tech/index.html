@@ -1,0 +1,302 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+
+    <!-- Candlelight Added -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ copy.Technology.meta.og.title }}</title>
+
+    <base href="/tech/">
+
+    <meta name="description" content="{{ copy.Technology.meta.og.description }}" />
+    <meta name="keywords" content="af, Candlelight" />
+    <meta name="viewport" content="width=1200" />
+    <meta name="fragment" content="!">
+    <link type="text/plain" rel="author" href="../humans.txt" />
+
+    <meta property="og:url" content="http://justareflektor.com/tech"/>
+    <meta property="og:image" content="http://justareflektor.com/img/og/facebook.jpg" />
+    <meta property="og:title" content="{{ copy.Technology.meta.og.title }}" />
+    <meta property="og:description" content="{{ copy.Technology.meta.og.description }}" />
+
+    <link rel="apple-touch-icon" href="../img/apple/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple/apple-touch-icon-144x144.png" />
+
+    <link href='//fonts.googleapis.com/css?family=Crimson+Text:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./styles/sandbox.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/assets.css">
+
+    <script src="/third-party/url.js"></script>
+    <script src="/third-party/jquery.js"></script>
+    <script src="/third-party/two.js"></script>
+    <script src="/src/resource.js"></script>
+
+    <!-- Candlelight Added -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/lib/html5shiv.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+    <!-- Inline to load immediately -->
+    <div id="veil" style="display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999; background: #000 url(/img/essential/ajax-loader.gif) center center no-repeat;"></div>
+
+    <div id="content" style="display:none;">
+
+      <button id="back-to-home" class="close hover">
+        <div class="asset icon-close out"></div>
+        <div class="asset icon-close-over over"></div>
+      </button>
+
+      <div id="introduction" class="section">
+
+        <div class="masthead">
+          <h1 data-url="/"><img src="./images/logo.svg" onmousedown="return false" alt="" /></h1>
+          <span class="page-name" data-i18n="Technology.title"></span>
+        </div>
+
+        <div>
+
+          <p class="synopsis" data-i18n="Technology.overview"></p>
+
+          <div id="legend"></div>
+
+        </div>
+
+      </div>
+
+      <div id="presets" class="section">
+
+      </div>
+
+      <div id="sandbox" class="section">
+
+        <div id="webgl-error" class="url-context-menu">
+          <div class="backdrop"></div>
+          <div class="container">
+            <p data-i18n="Technology.sandbox.WebGLerror"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="presets-header">
+        <p data-i18n="Technology.sandbox.additionalPresets"></p>
+      </div>
+      <ul id="additional-presets"></ul>
+
+      <div id="technology" class="section">
+        <h3 class="list-title" data-i18n="Technology.webHeader"></h3>
+        <ul id="web-technologies">
+
+            <li class="item i-0">
+              <div class="icon threejs"></div>
+              <h3 data-i18n="Technology.threeHeader"></h3>
+              <p data-i18n="Technology.threeDescription"></p>
+            </li>
+          
+            <li class="item i-1">
+              <div class="icon webgl"></div>
+              <h3 data-i18n="Technology.webGLHeader"></h3>
+              <p data-i18n="Technology.webGLDescription"></p>
+            </li>
+          
+            <li class="item i-2">
+              <div class="icon tailbone"></div>
+              <h3 data-i18n="Technology.tailboneHeader"></h3>
+              <p data-i18n="Technology.tailboneDescription"></p>
+            </li>
+          
+            <li class="item i-3">
+              <div class="icon websockets"></div>
+              <h3 data-i18n="Technology.websocketsHeader"></h3>
+              <p data-i18n="Technology.websocketsDescription"></p>
+            </li>
+          
+            <li class="item i-4">
+              <div class="icon getusermedia"></div>
+              <h3 data-i18n="Technology.getusermediaHeader"></h3>
+              <p data-i18n="Technology.getusermediaDescription"></p>
+            </li>
+          
+            <li class="item i-5">
+              <div class="icon webaudio"></div>
+              <h3 data-i18n="Technology.webaudioHeader"></h3>
+              <p data-i18n="Technology.webaudioDescription"></p>
+            </li>
+          
+            <li class="item i-6">
+              <div class="icon deviceorientation"></div>
+              <h3 data-i18n="Technology.deviceorientationHeader"></h3>
+              <p data-i18n="Technology.deviceorientationDescription"></p>
+            </li>
+
+        </ul>
+        <h3 class="list-title" data-i18n="Technology.productsHeader"></h3>
+        <ul id="google-products">
+          
+            <li class="item i-0">
+              <!-- <div class="icon chrome"></div> -->
+              <h3 data-i18n="Technology.chromeHeader"></h3>
+              <p data-i18n="Technology.chromeDescription"></p>
+            </li>
+          
+            <li class="item i-1">
+              <!-- <div class="icon appengine"></div> -->
+              <h3 data-i18n="Technology.appengineHeader"></h3>
+              <p data-i18n="Technology.appengineDescription"></p>
+            </li>
+          
+            <li class="item i-2">
+              <!-- <div class="icon cloudcompute"></div> -->
+              <h3 data-i18n="Technology.computeHeader"></h3>
+              <p data-i18n="Technology.computeDescription"></p>
+            </li>
+          
+            <li class="item i-3">
+              <!-- <div class="icon cloudstorage"></div> -->
+              <h3 data-i18n="Technology.cloudHeader"></h3>
+              <p data-i18n="Technology.cloudDescription"></p>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div id="downloads">
+        <!-- <h3 class="list-title" data-i18n="Technology.opensourceHeader">100% Open Source</h3> -->
+        <ul>
+          <li class="item i-0">
+            <p data-i18n="Technology.opensourceDescription"></p>
+          </li>
+          <li class="item i-1">
+            <a href="#" target="_blank"><button id="code-film" data-i18n="Technology.codeFilm"></button></a
+            <a href="#" target="_blank"><button id="code-sandbox" data-i18n="Technology.codeSandbox"></button></a
+            <a href="https://github.com/mrdoob/three.js/" target="_blank"><button id="code-threejs" data-i18n="Technology.codeThree"></button></a
+            <a href="https://github.com/dataarts/tailbone" target="_blank"><button id="code-tailbone" data-i18n="Technology.codeTailbone"></button</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="FooterGoogleView shown" style="display: block;">
+        <div class="page" style="opacity: 1;">
+          <button class="link external asset logo-chrome-experiment" data-url="http://www.chromeexperiments.com/"></button>
+          <aside class="separator"></aside>
+          <button class="link external asset logo-made-with-some-friends-from-google" data-url="http://www.google.com/"></button>
+        </div>
+      </footer>
+
+      <footer class="FooterLinksView shown" style="display: block;">
+        <div class="page" style="opacity: 1;">
+          <nav class="links">
+              <ul>
+                  <li>
+                    <button class="link external" data-i18n="FooterLinksView.album" data-url="http://www.arcadefire.com/"></button>
+                  </li>
+                  <li>
+                    <button class="link route trigger" data-i18n="FooterLinksView.about" data-url="/about"></button>
+                  </li>
+                  <li>
+                    <button class="link external" data-i18n="FooterLinksView.technology" data-url="/tech?home"></button>
+                  </li>
+                  <li>
+                    <button class="link external" data-i18n="FooterLinksView.terms" data-url="https://www.google.com/policies/"></button>
+                  </li>
+<!--                   <li>
+                    <button class="static" data-i18n="FooterLinksView.share"></button>
+                  </li> -->
+                  <li class="button share separator">
+                    <button class="share google">
+                      <div class="asset icon-google"></div>
+                    </button>
+                  </li>
+                  <li class="button share">
+                    <button class="share facebook">
+                      <div class="asset icon-facebook"></div>
+                    </button>
+                  </li>
+                  <li class="button share">
+                    <button class="share twitter">
+                      <div class="asset icon-twitter"></div>
+                    </button>
+                  </li>
+              </ul>
+          </nav>
+          <select class="language">
+              <option value="cs">čeština</option>
+              <option value="de">Deutsch</option>
+              <option value="en-gb">English (UK)</option>
+              <option value="en-us">English (US)</option>
+              <option value="es">Español</option>
+              <option value="es-419">Español (Latinoamérica)</option>
+              <option value="fr">Français</option>
+              <option value="it">Italiano</option>
+              <option value="ht">Kreyòl Ayisyen</option>
+              <option value="nl">Nederlands</option>
+              <option value="pl">Polski</option>
+              <option value="pt-br">Portuguès (Brasil)</option>
+              <option value="sv">Svenska</option>
+              <option value="tr">Türkçe</option>
+              <option value="ru">ру́сский</option>
+              <option value="ar">العربية</option>
+              <option value="th">ไทย</option>
+              <option value="ko">한국어</option>
+              <option value="zh-hk">中文(简体中文)</option>
+              <option value="zh-tw">中文(繁體中文)</option>
+              <option value="ja">日本語</option>
+          </select>
+        </div>
+      </footer>
+
+    </div>
+    <br class="clear" />
+    <div class="scripts">
+
+      <!-- // <script src="./js/build.js"></script> -->
+
+      <script>
+
+        $(function() {
+
+          // Load individual files
+          if (resource.local) {
+            var i = 0;
+            $.getJSON('./data/files.json', function(files) {
+              var i = 0, length = files.length;
+              var getScript = function() {
+                if (i >= length) {
+                  return;
+                }
+                $.getScript(files[i], function() {
+                  i++;
+                  getScript();
+                });
+              };
+              getScript();
+            });
+            return;
+          }
+
+          // Load built files
+          $.getScript('./js/build.min.js');
+
+        });
+
+      </script>
+
+    </div>
+
+    <script>
+        var LANGUAGE = '{{language}}';
+    </script>
+
+  </body>
+</html>

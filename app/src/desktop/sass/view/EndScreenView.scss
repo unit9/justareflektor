@@ -1,0 +1,116 @@
+section.EndScreenView {
+
+  @extend %PageView;
+
+  .content {
+
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -60px;
+    text-align: center;
+
+    >.button {
+
+      width: 120px;
+      height: 28px;
+      text-align: center;
+      margin-top: 1px;
+      margin-bottom: 20px;
+
+    }
+
+    nav.sharing {
+      @include horizontal-list;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 79px;
+    }
+
+
+    nav.links {
+
+      @include horizontal-list;
+      margin-top: 16px;
+
+      color: white;
+
+      ul {
+        display: inline-block;
+      }
+
+
+      li {
+
+        margin-right: 12px;
+        margin-top: 2px;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+        padding: 0;
+
+        &:after {
+          content: '|';
+          height: 15px;
+          margin-left: 12px;
+          margin-right: 0px;
+        }
+
+        &:nth-last-child(1) {
+          margin-right: 0px;
+          &:after {
+            content: '';
+          }
+        }
+
+        button {
+          @include font-size(16px);
+          letter-spacing: 1px;
+        }
+
+      }
+
+
+      button {
+
+        @extend button.fade-over;
+
+      }
+
+      button, li {
+
+        font-family: 'Crimson Text', serif;
+        @include font-size(17px);
+        color: white !important;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+
+        &.static {
+          -webkit-transition: none;
+          padding-left: 4px;
+          cursor: default;
+          &:hover {
+            -webkit-transition: none;
+            opacity: 1;
+            cursor: default;
+          }
+        }
+      }
+
+
+      li.button {
+
+        margin-top: 1px;
+
+      }
+
+    }
+
+
+
+
+
+  }
+}

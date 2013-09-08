@@ -1,0 +1,1508 @@
+{
+    "timeline": [
+
+        {
+            "id": "deformmask",
+            "class": "DeformMaskSequence",
+            "start": 0,
+            "end": 1707,
+            "settings": {
+
+                "drawingSize": 0.23,
+                "drawingOpacity": 0.45,
+                "accumSpeed": 0.99,
+
+                "drawingSizeRays": 0.8,
+
+                "centerFadeSizeRays": 0.15,
+                "drawingOpacityRays": 0.9,
+                "accumSpeedRays": 0.8,
+                "noiseAlphaRays": 0.7,
+                "noiseRadiusRays": 500.0,
+                "drawingDiffExp": 1.25,
+
+                "drawingAdditive": 0.25,
+
+                "drawingAlphaComposite": 1.0,
+                "videoAlphaComposite": 0.0,
+                "godRaysAlphaComposite": 1.0,
+
+                "fade": 0.0,
+
+                "godRaysTransition": 0.0
+            },
+
+            "transitions": [
+                {
+                    "name": "GodRaysTransition",
+                    "time": "absoluteFrame",
+                    "start": 835,
+                    "end": 860,
+                    "valuesStart": {
+                        "godRaysTransition": "default"
+                    },
+                    "valuesEnd": {
+                        "godRaysTransition": 1.0
+                    }
+                },
+
+                {
+                    "name": "fadeIn",
+                    "time": "absoluteFrame",
+                    "start": 0,
+                    "end": 90,
+                    "valuesStart": {
+                    },
+                    "valuesEnd": {
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "drawingSize": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "drawingOpacity": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "accumSpeed": {
+                    "min": 0.9,
+                    "max": 1.0
+                },
+
+                "drawingSizeRays": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "centerFadeSizeRays": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "drawingOpacityRays": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "accumSpeedRays": {
+                    "min": 0.7,
+                    "max": 1.0
+                },
+                "noiseAlphaRays": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "noiseRadiusRays": {
+                    "min": 0.0,
+                    "max": 1000.0
+                },
+
+                "drawingAdditive": {
+                    "min": 0.0,
+                    "max": 3.0
+                },
+
+                "drawingDiffExp": {
+                    "min": 0.0,
+                    "max": 10.0
+                },
+
+                "drawingAlphaComposite": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "videoAlphaComposite": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "godRaysAlphaComposite": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "godRaysTransition": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+        },
+
+        {
+            "id": "opticalfeedback",
+            "class": "OpticalFeedbackSequence",
+            "start": 1708,
+            "end": 2121,
+
+            "settings": {
+                "effectAlpha": 0.55,
+                "compositeEffectAlpha": 0.0,
+                
+                "opacityFar": 0.45,
+                "opacityNear": 0.3,
+
+                "opacityDiff": 1.0,
+                "centerOpacityDec": 0.5,
+                "feedbackSpeedNear": 0.4,
+                "feedbackSpeedFar": 1.75,
+                "blending": "additive",
+                "numPlanesClose": 15,
+                "numPlanesFar": 20,
+                
+                "scalingFar": 4.0,
+                "scalingNear": 25.0,
+
+                "rangeX": 1400,
+                "rangeY": 1000,
+                "fade": 0.0
+            },
+
+            "transitions": [
+                {
+                    "name": "wallBlackout",
+                    "time": "absoluteFrame",
+                    "start": 1707,
+                    "end": 1745,
+                    "valuesStart": {
+                        "fade": 1.0
+                    },
+                    "valuesEnd": {
+                        "fade": 1.0
+                    }
+                },
+                {
+                    "name": "fadeIn",
+                    "time": "absoluteFrame",
+                    "start": 1745,
+                    "end": 1790,
+                    "valuesStart": {
+                        "fade": 1.0
+                    },
+                    "valuesEnd": {
+                        "fade": 0.0
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "absoluteFrame",
+                    "start": 2110,
+                    "end": 2120,
+                    "valuesStart": {
+                        "fade": "default"
+                    },
+                    "valuesEnd": {
+                        "fade": 1.0
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "effectAlpha": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "compositeEffectAlpha": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "opacityNear": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "opacityFar": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "centerOpacityDec": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "opacityDiff": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "blending": ["alpha", "additive"],
+                "numPlanesClose": {
+                    "min": 1,
+                    "max": 30
+                },
+                "numPlanesFar": {
+                    "min": 1,
+                    "max": 30
+                },
+                "scalingFar": {
+                    "min": 0.5,
+                    "max": 30.0
+                },
+                "scalingNear": {
+                    "min": 0.5,
+                    "max": 30.0
+                },
+                "rangeX": {
+                    "min": 0,
+                    "max": 2000
+                },
+                "rangeY": {
+                    "min": 0,
+                    "max": 2000
+                },
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "feedbackSpeedFar": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "feedbackSpeedNear": {
+                    "min": 0.0,
+                    "max": 2.0
+                }
+            }
+        },
+
+
+        {
+            "id": "lanme",
+            "class": "LanmeSequence",
+            "start": 2122,
+            "end": 2949,
+
+            "settings": {
+                "playbackRate": 1.0,
+                "effectAlphaNear": 0.45,
+                "effectAlphaFar": 0.22,
+                "effectSpeed": 1.0,
+                "drawingSizeNear": 0.125,
+                "drawingSizeFar": 0.45,
+                "blurSize": 25.0,
+                "accumulation": 0.93,
+                "fade": 0.0,
+                "pulse": 0.25,
+                "pass": "finalComposite",
+                "shader": "chromadiffDirectionStatic.frag"
+            },
+
+            "transitions": [
+                {
+                    "name": "fadeIn",
+                    "time": "absoluteFrame",
+                    "start": 2120,
+                    "end": 2155,
+                    "valuesStart": {
+                        "fade": 0.2,
+                        "effectAlphaNear": 0.005,
+                        "effectAlphaFar": 0.0
+                    },
+                    "valuesEnd": {
+                        "fade": 0.0,
+                        "effectAlphaNear": "default",
+                        "effectAlphaFar": "default"
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "absoluteFrame",
+                    "start": 2800,
+                    "end": 2949,
+                    "valuesStart": {
+                        "fade": 0.0
+                    },
+                    "valuesEnd": {
+                        "fade": 0.05
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "shader": ["chromadiffDirectionStatic.frag","vibranceNoise.frag", "vibrance.frag", "chromadiff.frag", "chromadiffNoise.frag", "chromadiffDirection.frag", "blur.frag", "blurLarge.frag","blurNoise.frag", "blurAddNoise.frag","exposure.frag", "exposureNoise.frag","blackAndWhite.frag", "blackAndWhiteNoise.frag", "displace.frag","difference.frag"],
+                "playbackRate": {
+                    "min": 0.1,
+                    "max": 5.0
+                },
+                "effectAlphaNear": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "effectAlphaFar": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "effectSpeed": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "drawingSizeNear": {
+                    "min": 0.0,
+                    "max": 0.6
+                },
+                "drawingSizeFar": {
+                    "min": 0.0,
+                    "max": 0.6
+                },
+                "pulse": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "blurSize": {
+                    "min": 0.0,
+                    "max": 50.0
+                },
+                "accumulation": {
+                    "min": 0.9,
+                    "max": 1.0
+                },
+                "pass": ["drawing", "timeComposite", "finalComposite"],
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+        },
+
+        {
+            "id": "videogrid",
+            "class": "VideoGridSequence",
+            "start": 2949,
+            "end": 3862,
+
+            "settings": {
+                "followSize": 1.4,
+                "lineWidth": 2.0,
+                "scaleFromCenter": 0.5,
+                "snapWidth": 0.45,
+                "fadeSpeedNear": 500,
+                "fadeSpeedFar": 800,
+                "numConnectionsFar": 4,
+                "numConnectionsNear": 12,
+                "fade": 0.0,
+                "extrudeDistance": 1.0
+            },
+
+            "transitions": [
+                {
+                    "name": "fadeIn",
+                    "time": "absoluteFrame",
+                    "start": 2949,
+                    "end": 3000,
+                    "valuesStart": {
+                        "fade": 1.0,
+                        "fadeSpeedNear": 1.0,
+                        "fadeSpeedFar": 1.0
+                    },
+                    "valuesEnd": {
+                        "fade": 0.0,
+                        "fadeSpeedNear": "default",
+                        "fadeSpeedFar": "default"
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "absoluteFrame",
+                    "start": 3800,
+                    "end": 3862,
+                    "valuesStart": {
+                        "fade": 0.0,
+                        "fadeSpeedNear": "default",
+                        "fadeSpeedFar": "default"
+                    },
+                    "valuesEnd": {
+                        "fade": 1.0,
+                        "fadeSpeedNear": 0.1,
+                        "fadeSpeedFar": 0.1
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "followSize": {
+                    "min": 1.0,
+                    "max": 4.0
+                },
+                "lineWidth": {
+                    "min": 0.0,
+                    "max": 8.0
+                },
+                "scaleFromCenter": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "snapWidth": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "fadeSpeedNear": {
+                    "min": 1,
+                    "max": 2000
+                },
+                "fadeSpeedFar": {
+                    "min": 1,
+                    "max": 2000
+                },
+                "numConnectionsFar": {
+                    "min": 0,
+                    "max": 20
+                },
+                "numConnectionsNear": {
+                    "min": 0,
+                    "max": 30
+                },
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "extrudeDistance": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+        },
+
+
+        {
+            "id": "feedback",
+            "class": "FeedbackSequence",
+            "start": 3863,
+            "end": 4321,
+
+            "settings": {
+                "useAccumulation": false,
+                "useRotation": true,
+                "numberOfPlanes": 15,
+                "colors": "none",
+                "blackAndWhite": false,
+                "blurOffset": 1.0,
+                "playbackRate": 1.00,
+                "frameSkip": 0.0,
+                "scaleFar": 1.0,
+                "scaleNear": 3.0,
+                "fade": 0.0
+            },
+
+            "transitions": [
+                {
+                    "name": "fadeIn",
+                    "time": "absoluteFrame",
+                    "start": 3863,
+                    "end": 3900,
+                    "valuesStart": {
+                        "fade": "default"
+                    },
+                    "valuesEnd": {
+                        "fade": "default"
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "absoluteFrame",
+                    "start": 4275,
+                    "end": 4321,
+                    "valuesStart": {
+                        "fade": 0.0
+                    },
+                    "valuesEnd": {
+                        "fade": 1.0
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "numberOfPlanes": {
+                    "min": 3,
+                    "max": 19
+                },
+                "scaleFar": {
+                    "min": 0.05,
+                    "max": 10.0
+                },
+                "scaleNear": {
+                    "min": 0.05,
+                    "max": 10.0
+                },
+                "frameSkip": {
+                    "min": 0,
+                    "max": 10
+                },
+                "playbackRate": {
+                    "min": 0.05,
+                    "max": 6.0
+                },
+                "blurOffset": {
+                    "min": 0.5,
+                    "max": 5.0
+                },
+                "colors": ["none", "blue/green", "hsv"],
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+        },
+
+        {
+            "id": "zombies",
+            "class": "ZombiesSequence",
+            "start": 4322,
+            "end": 5397,
+
+            "settings": {
+                "showPointsAxelle": false,
+                "showPointsZombies": true,
+                "numBeams": 7,
+                "randomBeamsConsider": 10,
+                "maxBeamLife": 12,
+                "beamWidth": 3.5,
+                "beamWidthBlur": 40,
+                "blurDistance": 0.75,
+                "beamWidthBlur2": 75,
+                "blurDistance2": 0.5,
+                "beamTip": 10,
+                "beamTipOpacity": 1.0,
+                "zombieTransfer": 1.0,
+                "zombieFlare": 0.0,
+                "smoothingMaxDistance": 0.35,
+                "zombieFlareSize": 6.0,
+                "nearScaling": 0.6
+            },
+
+            "transitions": [
+
+
+                {
+                    "name": "zombieP1",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 0,
+                    "end": 60,
+                    "values": {
+                        "zombieFlareSize":5.0
+                    }
+                },
+                {
+                    "name": "zombieP2",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 60,
+                    "end": 160,
+                    "values": {
+                        "zombieFlareSize":8.0
+                    }
+                },
+
+
+                {
+                    "name": "zombieFlareStart",
+                    "time": "relativeFrame",
+                    "start": 0,
+                    "end": 160,
+                    "valuesStart": {
+                        "zombieFlare":1.0,
+                        "beamTipOpacity":0.0,
+                        "blurDistance": 1.0,
+                        "blurDistance2": 1.0
+                    },
+                    "valuesEnd": {
+                        "zombieFlare":1.0,
+                        "beamTipOpacity":0.0,
+                        "blurDistance": "default",
+                        "blurDistance2": "default"
+                    }
+                },
+                {
+                    "name": "zombieFlareFade",
+                    "time": "relativeFrame",
+                    "start": 160,
+                    "end": 180,
+                    "valuesStart": {
+                        "zombieFlare":1.0,
+                        "beamTipOpacity":0.0,
+                        "blurDistance": "default",
+                        "blurDistance2": "default"
+                    },
+                    "valuesEnd": {
+                        "zombieFlare":"default",
+                        "beamTipOpacity":0.0,
+                        "blurDistance": "default",
+                        "blurDistance2": "default"
+                    }
+                },
+                {
+                    "name": "zombieBurst",
+                    "time": "relativeFrame",
+                    "start": 180,
+                    "end": 270,
+                    "valuesStart": {
+                        "zombieTransfer": 0.0,
+                        "beamTipOpacity": 0.0
+                    },
+                    "valuesEnd": {
+                        "zombieTransfer": "default",
+                        "beamTipOpacity": "default"
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "relativeFrame",
+                    "start": 1005,
+                    "end": 1015,
+                    "valuesStart": {
+                        "beamTipOpacity": "default"
+                    },
+                    "valuesEnd": {
+                        "beamTipOpacity": 0.0
+                    }
+                }
+            ],
+
+            "parts": {
+                "all": { "start": 0, "end": 1075 },
+                "zombiesOnly": { "start": 0, "end": 160 },
+                "zombiesFlarePart": { "start": 0, "end": 235 },
+                "zombiesAndAxelle": { "start": 160, "end": 450 },
+                "zombiesAndAxelleShort": { "start": 160, "end": 350 },
+                "closeup": { "start": 450, "end": 675 },
+                "axelleAlone": { "start": 675, "end": 900 },
+                "closeup2": { "start": 900, "end": 1075 }
+            },
+
+            "settingsRange": {
+                "numBeams": {"min": 1, "max": 20},
+                "randomBeamsConsider": {"min": 1, "max": 20},
+                "maxBeamLife": {"min":0.0, "max": 100},
+                "beamWidth": {"min":0.0, "max": 50},
+                "beamWidthBlur": {"min":0.0, "max": 200},
+                "beamWidthBlur2": {"min":0.0, "max": 200},
+                "blurDistance": {"min":0.0, "max": 1.5},
+                "blurDistance2": {"min":0.0, "max": 1.5},
+                "beamTip": {"min":0.0, "max": 100},
+                "beamTipOpacity": {"min":0.0, "max": 1.0},
+                "zombieTransfer": {"min":0.0, "max": 1.0},
+                "zombieFlare": {"min":0.0,"max":1.0},
+                "smoothingMaxDistance": {"min":0.0,"max":1.0},
+                "nearScaling": {"min":0.0,"max":5.0}
+
+            }
+        },
+
+
+        {
+            "id": "mirror",
+            "class": "MirrorSequence",
+            "start": 5397,
+            "end": 5912,
+            "transitionOffset": -8,
+
+            "settings": {
+                "playbackRate": 1.0,
+                "effectAlphaNear": 0.6,
+                "effectAlphaFar": 0.3,
+                "raysAlpha": 0.9,
+                "raysRadius": 0.85,
+                "iterations": 7,
+                "mirrorKidAlpha": 0.4,
+                "mirrorKidFoilRadius": 4.5,
+                "mirrorKidFoilDisplacement": 1.0,
+                "webcamAlpha": 1.0,
+                "mirrorKidGlowNear": 0.0,
+                "colorFlash": 0.0,
+
+                "maskRatio": 0.25,
+                "maskScale": 1.0,
+                "maskOffset": 0.0,
+                "headCenterX": 0.0,
+                "headCenterY": 0.0,
+                "phoneRangeLeft": 1.0,
+                "phoneRangeRight": 1.0,
+                "phoneRangeY": 0.75,
+                "mirrorCenterX": 0.0,
+                "mirrorCenterY": 0.0,
+                "mirrorMaskExposure": 1.0
+            },
+
+            "parts": {
+                "all": { "start": 0, "end": 1075 },
+                "mirrorKid": { "start": 0, "end": 100 },
+                "zombies": { "start": 100, "end": 122 },
+                "p1_side": { "start": 150, "end": 170 },
+                "p2_face": { "start": 205, "end": 223 },
+                "p3_side": { "start": 307, "end": 327 },
+                "p4_face": { "start": 410, "end": 429 },
+                "p5_top": { "start": 459, "end": 480 },
+                "p5_broken": { "start": 502, "end": 511 }
+            },
+
+            "transitions": [
+                {
+                    "name": "fadeIn",
+                    "time": "relativeFrame",
+                    "start": 0,
+                    "end": 10,
+                    "valuesStart": {
+                        "colorFlash": 0.0
+                    },
+                    "valuesEnd": {
+                        "colorFlash": "default"
+                    }
+                },
+
+
+                {
+                    "name": "mirrorKid",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 0,
+                    "end": 24,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 0.35,
+                        "maskOffset": -0.04375,
+
+                        "headCenterX": 0.5,
+                        "headCenterY": 0.5,
+
+                        "phoneRangeLeft": -1.0,
+                        "phoneRangeRight": 1.0,
+                        "phoneRangeY": 0.9,
+                        "foilDisplacement": 0.0,
+
+                        "mirrorCenterX": 0.5,
+                        "mirrorCenterY": 0.5,
+
+                        "effectAlphaNear": 0.0,
+                        "effectAlphaFar": 0.0,
+                        "colorFlash": 0.0,
+                        "mirrorKidGlowNear": 0.65,
+
+                        "mirrorKidAlpha": "default"
+                    }
+                },
+
+                {
+                    "name": "zombies",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 102,
+                    "end": 123,
+                    "values": {
+                        "maskRatio": 0.0,
+                        "maskScale": 0.0,
+                        "maskOffset": 0.0,
+
+                        "headCenterX": 0.5,
+                        "headCenterY": 0.5,
+
+                        "foilDisplacement": "default",
+
+                        "phoneRangeLeft": 0.0,
+                        "phoneRangeRight": 0.0,
+                        "phoneRangeY": 0.0,
+
+                        "mirrorCenterX": 0.5,
+                        "mirrorCenterY": 0.5,
+
+                        "effectAlphaNear": 0.0,
+                        "effectAlphaFar": 0.0,
+
+                        "mirrorKidAlpha": 0.0,
+                        "mirrorKidGlowNear": 0.0,
+
+                        "colorFlash": 0.0,
+                        "mirrorMaskExposure": 1.0
+                    }
+                },
+
+                {
+                    "name": "p1_side",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 153,
+                    "end": 170,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 1.0,
+                        "maskOffset": -0.21875,
+
+                        "headCenterX": 0.17,
+                        "headCenterY": 0.23,
+
+                        "phoneRangeLeft": 0.0,
+                        "phoneRangeRight": 1.0,
+                        "phoneRangeY": 0.9,
+
+                        "mirrorCenterX": -0.35,
+                        "mirrorCenterY": 0.6,
+
+                        "effectAlphaNear":  0.65,
+                        "effectAlphaFar": 0.5,
+
+                        "mirrorKidAlpha": 0.55,
+                        "mirrorMaskExposure": 4.0,
+
+                        "colorFlash": "default"
+                    }
+                },
+
+                {
+                    "name": "p2_face",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 205,
+                    "end": 224,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 0.5,
+                        "maskOffset": -0.0760416666666,
+
+                        "headCenterX": 0.216,
+                        "headCenterY": 0.15,
+
+                        "phoneRangeLeft": -1.0,
+                        "phoneRangeRight": 1.0,
+                        "phoneRangeY": 0.9,
+
+                        "mirrorCenterX": 0.5,
+                        "mirrorCenterY": 0.4,
+
+                        "effectAlphaNear": 0.29,
+                        "effectAlphaFar": 0.275,
+                        "mirrorMaskExposure": 1.0,
+
+                        "mirrorKidAlpha": "default"
+                    }
+                },
+
+                {
+                    "name": "p3_side",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 307,
+                    "end": 327,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 0.6,
+                        "maskOffset": -0.04270833333,
+
+                        "headCenterX": 0.0,
+                        "headCenterY": 0.0,
+
+                        "phoneRangeLeft": 0.0,
+                        "phoneRangeRight": 1.5,
+                        "phoneRangeY": 0.8,
+
+                        "mirrorCenterX": -0.5,
+                        "mirrorCenterY": -0.45,
+
+                        "effectAlphaNear": 0.425,
+                        "effectAlphaFar": 0.325,
+
+                        "mirrorKidAlpha": 0.0
+                    }
+                },
+
+                {
+                    "name": "p4_face",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 410,
+                    "end": 429,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 0.5,
+                        "maskOffset": -0.115625,
+
+                        "headCenterX": 0.0,
+                        "headCenterY": 0.0,
+
+                        "phoneRangeLeft": -1.0,
+                        "phoneRangeRight": 1.0,
+                        "phoneRangeY": 1.0,
+
+                        "mirrorCenterX": -0.75,
+                        "mirrorCenterY": -0.75,
+
+                        "effectAlphaNear": 0.39,
+                        "effectAlphaFar": 0.35,
+
+                        "mirrorKidAlpha": 0.0
+                    }
+                },
+
+                {
+                    "name": "p5_top",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 459,
+                    "end": 481,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 1.0,
+                        "maskOffset": -0.37083333,
+
+                        "headCenterX": 0.0,
+                        "headCenterY": 0.0,
+
+                        "phoneRangeLeft": -0.6,
+                        "phoneRangeRight": 0.6,
+                        "phoneRangeY": 0.8,
+
+                        "mirrorCenterX": -0.5,
+                        "mirrorCenterY": 0.5,
+
+                        "effectAlphaNear": 0.55,
+                        "effectAlphaFar": 0.425,
+
+                        "mirrorKidAlpha": 0.0
+                    }
+                },
+
+                {
+                    "name": "p5_broken",
+                    "time": "relativeFrame",
+                    "type": "cut",
+                    "start": 502,
+                    "end": 512,
+                    "values": {
+                        "maskRatio": 0.25,
+                        "maskScale": 1.0,
+                        "maskOffset": -0.37083333,
+
+                        "headCenterX": 0.0,
+                        "headCenterY": 0.0,
+
+                        "phoneRangeLeft": -0.5,
+                        "phoneRangeRight": 0.5,
+                        "phoneRangeY": 0.5,
+
+                        "mirrorCenterX": -0.5,
+                        "mirrorCenterY": -0.8,
+
+                        "effectAlphaNear": 0.35,
+                        "effectAlphaFar": 0.3,
+
+                        "mirrorKidAlpha": 0.0
+                    }
+                },
+
+                {
+                    "name": "colorFlashOut",
+                    "time": "relativeFrame",
+                    "start": 507,
+                    "end": 510,
+                    "valuesStart": {
+                        "colorFlash":0.0
+                    },
+                    "valuesEnd": {
+                        "colorFlash":6.0
+                    }
+                }
+            ],
+
+
+            "settingsRange": {
+                "playbackRate": {
+                    "min": 0.1,
+                    "max": 5.0
+                },
+                "effectAlphaNear": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "effectAlphaFar": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "raysAlpha": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "raysRadius": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "iterations": {
+                    "min": 1,
+                    "max": 12
+                },
+                "mirrorKidAlpha": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "mirrorKidFoilRadius": {
+                    "min": 0.0,
+                    "max": 10.0
+                },
+                "mirrorKidFoilDisplacement": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "webcamAlpha": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "colorFlash": {
+                    "min": 0.0,
+                    "max": 5.0
+                },
+                "mirrorKidGlowNear": {
+                    "min": 0.0,
+                    "max": 5.0
+                },
+
+                "maskRatio": null,
+                "maskScale": null,
+                "maskOffset": null,
+                "headCenterX": null,
+                "headCenterY": null,
+                "mirrorMaskExposure": null,
+                "phoneRangeLeft": {
+                    "min": -1.0,
+                    "max": 1.0
+                },
+                "phoneRangeRight": {
+                    "min": -1.0,
+                    "max": 1.0
+                },
+                "mirrorCenterX": null,
+                "mirrorCenterY": null
+            }
+        },
+
+
+        {
+            "id": "brokenmirror",
+            "class": "BrokenMirrorSequence",
+            "start": 5913,
+            "end": 6750,
+
+            "settings": {
+                "maxOffset": -100.0,
+                "maxScale": -0.15,
+                "chromaticAberration": 1.0,
+                "perspective": 0.85,
+                "edgesDiffraction": 0.8,
+                "rangeXYA": 0.02,
+                "rangeXYB": 0.006,
+                "rangeZA": 0.001,
+                "rangeZB": 0.004,
+                "cameraSpeedA": 0.04,
+                "cameraSpeedB": 6.0,
+                "parallax": 0.75,
+                "rotationPerspective": 0.0001,
+                "scale": 1.25,
+                "raysFinalAlpha": 0.75,
+                "raysBrightness": 0.75,
+                "raysMaskOffset": 0.0,
+
+                "dustOpacity": 1.0,
+                "glitchOpacity": 0.0,
+                "glitchOpacityFade": 0.0,
+                "glitchScale": 1.05,
+
+                "colorFlash": 0.0,
+                "fadeOut": 0.0,
+                "motionNoise": 0.0,
+                "mouseNoise": 0.5
+            },
+
+            "transitions": [
+
+                {
+                    "name": "ColorFlashFadeIn",
+                    "time": "relativeFrame",
+                    "start": 0,
+                    "end": 30,
+                    "valuesStart": {
+                        "colorFlash": 6.0
+                    },
+                    "valuesEnd": {
+                        "colorFlash": "default"
+                    }
+                },
+                {
+                    "name": "BreakFree",
+                    "time": "absoluteFrame",
+                    "start": 6200,
+                    "end": 6450,
+                    "valuesStart": {
+                        "motionNoise": "default"
+                    },
+                    "valuesEnd": {
+                        "motionNoise": 0.5
+                    }
+                },
+                {
+                    "name": "fadeOutNoise",
+                    "time": "absoluteFrame",
+                    "start": 6600,
+                    "end": 6725,
+                    "valuesStart": {
+                        "glitchOpacity": "default",
+                        "mouseNoise": "default",
+                        "glitchOpacityFade": "default"
+                    },
+                    "valuesEnd": {
+                        "glitchOpacity": 1.0,
+                        "glitchOpacityFade": 1.0,
+                        "mouseNoise": 0.5
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "absoluteFrame",
+                    "start": 6725,
+                    "end": 6750,
+                    "valuesStart": {
+                        "fadeOut": "default"
+                    },
+                    "valuesEnd": {
+                        "fadeOut": 1.05
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "maxOffset": {
+                    "min": -300.0,
+                    "max": 300.0
+                },
+                "maxScale": {
+                    "min": -1.0,
+                    "max": 1.0
+                },
+                "chromaticAberration": {
+                    "min": 0.0,
+                    "max": 12.0
+                },
+                "perspective": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "edgesDiffraction": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "rangeXYA": {
+                    "min": 0.0,
+                    "max": 0.1
+                },
+                "rangeXYB": {
+                    "min": 0.0,
+                    "max": 0.1
+                },
+                "rangeZA": {
+                    "min": 0.0,
+                    "max": 0.1
+                },
+                "rangeZB": {
+                    "min": 0.0,
+                    "max": 0.1
+                },
+                "cameraSpeedA": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "cameraSpeedB": {
+                    "min": 0.0,
+                    "max": 10.0
+                },
+                "parallax": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "rotationPerspective": {
+                    "min": -1.0,
+                    "max": 1.0
+                },
+                "scale": {
+                    "min":0.1,
+                    "max": 2.0
+                },
+                "raysFinalAlpha": {
+                    "min":0.0,
+                    "max": 1.0
+                },
+                "raysBrightness": {
+                    "min":0.0,
+                    "max": 2.0
+                },
+                "raysMaskOffset": {
+                    "min": 0.0,
+                    "max": 3.0
+                },
+                "colorFlash": {
+                    "min": 0.0,
+                    "max": 10.0
+                },
+                "fadeOut": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "glitchOpacity": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "dustOpacity": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "motionNoise": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "glitchScale": {
+                    "min": 0.5,
+                    "max": 5.0
+                },
+                "mouseNoise": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+        },
+
+        {
+            "id": "finale",
+            "class": "FinaleSequence",
+            "start": 6750,
+            "end": 10855,
+
+            "settings": {
+                "breakFreeSize": 2.7,
+                "breakFreeFlickering": 0.4,
+                "motionNoise": 1.2,
+                "motionRays": 0.4,
+                "glitchScale": 2.0,
+
+                "screenAlpha": 0.8,
+                "darkenAlpha": 0.61,
+                "exposureMultiply": 2.2,
+                "exposureOffset": 0.9,
+                "minBlack": 0.0,
+                "maxWhite": 1.0,
+
+                "fade": 0.0
+            },
+
+             "transitions": [
+                {
+                    "name": "fadeIn",
+                    "time": "relativeFrame",
+                    "start": 0,
+                    "end": 1,
+                    "valuesStart": {
+                        "fade": 0.0
+                    },
+                    "valuesEnd": {
+                        "fade": "default"
+                    }
+                },
+                {
+                    "name": "fadeOut",
+                    "time": "relativeFrame",
+                    "start": 3400,
+                    "end": 3600,
+                    "valuesStart": {
+                        "fade": "default"
+                    },
+                    "valuesEnd": {
+                        "fade": 1.0
+                    }
+                }
+            ],
+
+            "settingsRange": {
+                "breakFreeSize":{
+                    "min": 1.0,
+                    "max": 10.0
+                },
+
+                "motionNoise": {
+                    "min": 0.0,
+                    "max": 3.0
+                },
+
+                "breakFreeFlickering": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+
+                "motionRays": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+
+                "glitchScale": {
+                    "min": 0.5,
+                    "max": 5.0
+                },
+
+                "screenAlpha": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+
+                "darkenAlpha": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+
+                "exposureMultiply": {
+                    "min": 0.0,
+                    "max": 5.0
+                },
+
+                "exposureOffset": {
+                    "min": 0.0,
+                    "max": 5.0
+                },
+
+                "minBlack": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+
+                "maxWhite": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+
+                "fade": {
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            }
+  
+        },
+
+        {
+            "id": "axelle",
+            "class": "AxelleSequence",
+            "start": "4:06:000",
+            "end": 999999,
+
+            "settings": {
+                "animationEnd": "4:42:00"
+            }
+        },
+
+        {
+            "id": "turnitback",
+            "class": "TurnItBackSequence",
+            "start": 0,
+            "end": 999999
+        },
+
+        {
+            "id": "turnitback2",
+            "class": "TurnItBackSequence",
+            "ignore": true,
+            "start": 0,
+            "end": 999999
+        },
+
+        {
+            "id": "webcamcontrol",
+            "class": "WebcamControlView",
+            "ignore": true,
+            "start": 0,
+            "end": 999999,
+
+
+            "settings": {
+                "exposure": 2.000,
+                "offset": -0.5000,
+                "noise": 0.15,
+                "lineNoise":0.5,
+                "lineWidthMin": 5.0,
+                "lineWidthMax": 5.0,
+                "lineOffsetMin": 0,
+                "lineOffsetMax": 0,
+                "beamSize": 1500,
+                "beamDistance": 200,
+                "beamOpacity": 0.8,
+                "blobOpacity": 0.9,
+                "blobSize":2.0
+            },
+
+            "transitions": [],
+
+            "settingsRange": {
+                "exposure": {
+                    "min": 0.0,
+                    "max": 3.0
+                },
+                "offset": {
+                    "min": -1.0,
+                    "max": 1.0
+                },
+                "noise": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "lineNoise": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "lineWidthMin": {
+                    "min": -50,
+                    "max": 100.0
+                },
+                "lineWidthMax": {
+                    "min": 0.0,
+                    "max": 100.0
+                },
+                "lineOffsetMin": {
+                    "min": -50,
+                    "max": 125.0
+                },
+                "lineOffsetMax": {
+                    "min": 0.0,
+                    "max": 125.0
+                },
+                "beamSize": {
+                    "min": 0.0,
+                    "max": 1500
+                },
+                "beamDistance": {
+                    "min": 0.0,
+                    "max": 1000.0
+                },
+                "beamOpacity": {
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "blobOpacity": {
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "blobSize": {
+                    "min": 0.0,
+                    "max": 10.0
+                }
+            }
+        },
+
+
+        {
+            "id": "MotionPrototype",
+            "class": "MotionPrototype",
+            "ignore": true,
+            "start": 0,
+            "end": 999999
+        },
+
+
+        {
+            "id": "SmoothingPrototype",
+            "class": "SmoothingPrototype",
+            "ignore": true,
+            "start": 0,
+            "end": 999999
+        }
+
+
+
+    ]
+}

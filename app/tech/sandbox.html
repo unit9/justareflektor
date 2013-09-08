@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reflektor: Sandbox</title>
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./styles/sandbox.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <script src="/third-party/url.js"></script>
+    <script src="/third-party/jquery.js"></script>
+<!--     // <script src="/_ah/channel/jsapi" type="text/javascript"></script>
+    // <script src="/tailbone.js" type="text/javascript"></script> -->
+    <script src="/third-party/two.js"></script>
+  </head>
+  <body>
+    <div>
+
+      <div id="presets" class="section">
+
+      </div>
+
+      <div id="sandbox" class="section">
+
+      </div>
+
+    </div>
+    <div class="scripts">
+
+      <!-- Third Party -->
+      <script src="/src/resource.js"></script>
+      <script src="/third-party/stats.js"></script>
+      <script src="/third-party/big-screen.js"></script>
+      <script src="/third-party/three.min.js"></script>
+      <script src="/third-party/OBJLoader.js"></script>
+      <!-- Presets -->
+      <script src="./src/presets.js"></script>
+      <!-- Sandbox -->
+      <script src="./src/sandbox.js"></script>
+      <script src="./src/viewport.js"></script>
+      <script src="./src/graph.js"></script>
+      <script src="./src/inspector.js"></script>
+      <script src="./src/node.js"></script>
+      <script src="./src/nodes/preview.js"></script>
+      <!-- Shaders -->
+      <script src="./src/nodes/shaders/AddBlendShader.js"></script>
+      <script src="./src/nodes/shaders/BlendShader.js"></script>
+      <script src="./src/nodes/shaders/ConvolutionShader.js"></script>
+      <script src="./src/nodes/shaders/CopyShader.js"></script>
+      <script src="./src/nodes/shaders/GodRaysShader.js"></script>
+      <script src="./src/nodes/shaders/RefractionShader.js"></script>
+      <script src="./src/nodes/shaders/drawingBlurShader.js"></script>
+      <script src="./src/nodes/shaders/videoFeedbackShader.js"></script>
+      <script src="./src/nodes/shaders/bumpToNormalShader.js"></script>
+      <script src="./src/nodes/shaders/vibranceShader.js"></script>
+      <!-- Nodes -->
+      <script src="./src/nodes/videoTexture.js"></script>
+      <script src="./src/nodes/breakingGlassScene.js"></script>
+      <script src="./src/nodes/renderNormals.js"></script>
+      <script src="./src/nodes/renderMask.js"></script>
+      <script src="./src/nodes/godRays.js"></script>
+      <script src="./src/nodes/bloom.js"></script>
+      <script src="./src/nodes/refraction.js"></script>
+      <script src="./src/nodes/drawingBlur.js"></script>
+      <script src="./src/nodes/videoFeedback.js"></script>
+      <script src="./src/nodes/bumpToNormal.js"></script>
+      <script src="./src/nodes/vibrance.js"></script>
+      <!-- Candlelight -->
+      <script src="/third-party/i18next-1.6.3.js"></script>
+      <script src="/src/desktop/js/lib/oo.js"></script>
+      <script src="/src/desktop/js/view/View.js"></script>
+      <script>
+
+        $(function() {
+
+          var duration = View.TRANSITION_TIME;
+          var files = Sandbox.Nodes.VideoTexture.Files;
+
+          var reveal = _.after(2, function() {
+
+            $('#content').css('display', 'block');
+            _.defer(function() {
+              $('#veil').fadeOut(duration, function() {
+                initializeSandbox();
+              });
+            });
+
+          });
+
+          /**
+           * Localize content
+           */
+
+          if (resource.local) {
+
+            reveal();
+
+          } else {
+
+            window.i18n.init({
+              fallbackLng: 'en',
+              detectLngQS: 'lng',
+              cookieName: 'lng',
+              ns: 'desktop',
+              resGetPath: '/api/client/localisation/get?lng=__lng__&ns=__ns__&format=unit9'
+            }, function(t) {
+              _.each(document.querySelectorAll('[data-i18n]'), function(el) {
+                el.innerHTML = t(el.getAttribute('data-i18n'));
+              });
+              reveal();
+            });
+
+          }
+
+          /**
+           * Preload Assets
+           */
+
+          Sandbox.Nodes.VideoTexture.ready(reveal);
+
+        });
+
+        function initializeSandbox() {
+
+          var $elem = $('#sandbox');
+
+          var sandbox = window.sandbox = new Sandbox({
+            showGraph: true,
+            size: 25,
+            width: window.innerWidth,
+            height: window.innerHeight
+          }).appendTo($elem[0]);
+
+          var videoTexture = new Sandbox.Nodes.VideoTexture();
+          var godRays = new Sandbox.Nodes.GodRays();
+
+          videoTexture.params.source.value = Sandbox.Nodes.VideoTexture.Files[2].value;
+          videoTexture.params.source.onUpdate();
+
+          sandbox
+            .add(videoTexture)
+            .add(godRays)
+
+          sandbox
+            .connect('texture', godRays, 'texture', videoTexture)
+            .connect('buffer', sandbox.preview, 'buffer', godRays)
+
+          sandbox.graph.lineup(true);
+          sandbox.toggle();
+
+          $(window).bind('keydown', function(e) {
+            if (e.which === 32) {
+              e.preventDefault();
+              e.stopPropagation();
+              sandbox.toggle();
+            }
+          });
+
+          var loop = function() {
+            sandbox.update();
+            // if (presets) presets.update();
+            requestAnimationFrame(loop);
+          };
+
+          loop();
+
+        }
+
+      </script>
+    </div>
+    <div id="veil"></div>
+  </body>
+</html>

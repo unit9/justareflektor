@@ -1,0 +1,97 @@
+section.AboutView {
+
+  @extend %PageView;
+
+  height: auto;
+  background-color: #000;
+
+ .page {
+    position: static;
+    display: table;
+  }
+
+  .content {
+    padding: 17px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: normal;
+
+    .icon-close {
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      cursor: pointer;
+    }
+
+    p.title {
+
+      @include font-size(17px);
+      font-weight: normal;
+
+    }
+
+    .separator {
+      margin: 15px auto;
+    }
+
+    .body {
+      @include font-size(15px);
+      line-height: 17px;
+    }
+
+    .logo {
+
+      text-align: left;
+
+      .logo-about, .separator, .title {
+
+        display: inline-block;
+        position: relative;
+
+      }
+
+      .separator, .title {
+
+        top: -6px;
+
+      }
+
+      .separator {
+
+        margin: 0 6px;
+
+      }
+
+    }
+
+    article {
+      text-align: left;
+    }
+
+    div.image {
+      padding: 17px 0;
+      border-bottom: 3px solid #434343;
+      margin-bottom: 33px;
+    }
+
+    > p, header {
+      font-weight: bold;
+      @include font-size(15px);
+    }
+
+    header {
+      margin-top: 20px;
+    }
+
+    div.entry {
+
+      p {
+        @include font-size(15px);
+        display: inline;
+      }  
+    }
+
+  }
+
+}

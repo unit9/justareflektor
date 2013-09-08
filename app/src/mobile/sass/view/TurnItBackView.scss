@@ -1,0 +1,30 @@
+section.TurnItBackView {
+
+  @extend %PageView;
+  background-color: black;
+
+  .turn-it-back {
+
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+
+  }
+
+  // prevent early asset loading
+  //&.shown, &.showing, &.hiding {
+
+    .turn-it-back {
+
+      background-image: url('/m/img/main/turn-it-back.jpg');
+
+    }
+
+  //}
+
+}

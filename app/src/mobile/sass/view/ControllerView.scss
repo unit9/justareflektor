@@ -1,0 +1,38 @@
+section.ControllerView {
+
+  @extend %PageView;
+
+  canvas {
+
+    position: absolute;
+
+  }
+
+  .debug {
+
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 24px;
+    background-color: #333333;
+    z-index: 9999;
+
+    .debug & {
+
+      display: block;
+
+    }
+
+    .time {
+
+      color: white;
+      margin-left: 4px;
+      margin-top: 4px;
+
+    }
+
+  }
+
+}

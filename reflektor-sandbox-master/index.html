@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Just A Reflektor: Sandbox</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <div class="scripts">
+      <script src="./build/sandbox.js"></script>
+      <script>
+
+        var sandbox = new Sandbox({
+          width: 640,
+          height: 480,
+          size: 25
+        }).appendTo(document.querySelector('#content'));
+
+        var loop = function() {
+          sandbox.update();
+          requestAnimationFrame(loop);
+        };
+
+        loop();
+
+      </script>
+    </div>
+  </body>
+</html>

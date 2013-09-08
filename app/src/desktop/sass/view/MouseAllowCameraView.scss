@@ -1,0 +1,40 @@
+section.MouseAllowCameraView {
+
+  @extend %PageView;
+
+  $mouseAllowCameraViewWidth: 700px;
+  $mouseAllowCameraViewHeight: 50px;
+
+  .content {
+
+    position: absolute;
+    width: $mouseAllowCameraViewWidth;
+    height: $mouseAllowCameraViewHeight;
+    left: 50%;
+    top: 50%;
+    margin-left: -$mouseAllowCameraViewWidth * 0.5;
+    margin-top: -$mouseAllowCameraViewHeight * 0.5;
+    text-align: center;
+
+    .instructions {
+
+      @include font-size(17px);
+      letter-spacing: 1px;
+      line-height: 25px;
+      margin-top: 30px;
+
+    }
+
+  }
+
+  .mouse-mode {
+
+    left: 50%;
+    bottom: 22px;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+
+  }
+
+}

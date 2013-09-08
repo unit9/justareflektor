@@ -1,0 +1,263 @@
+section.AboutView {
+
+  @extend %PageView;
+
+  $leftColumnWidth: 70%;
+  $rightColumnWidth: 30%;
+  $maxWidth: 1350px;
+
+  z-index: 101;
+  background-color: black;
+  letter-spacing: 1px;
+
+  .scroll {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+  }
+
+  .content {
+
+    position: relative;
+    margin-bottom: 50px;    
+    
+    .clear {
+      clear: both;
+    }
+
+    .column {
+
+      position: relative;
+
+      &.left {
+
+        width: $leftColumnWidth;
+        float: left;
+        margin-top: 35px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+        border-right: 1px solid #434343;        
+
+        .logo {
+        
+          padding-left: 50px;
+
+          .logo-about, .separator, .title {
+
+            display: inline-block;
+            position: relative;
+
+          }
+
+          .separator, .title {
+
+            top: -6px;
+
+          }
+
+          .separator {
+
+            margin: 0 6px;
+
+          }
+
+          .title {
+
+            @include font-size(16px);
+
+          }
+
+        }
+
+        article {
+
+          position: relative;
+          padding-left: 50px;
+          padding-right: 20px;
+          white-space: normal;
+          
+
+          .video, .photo {
+
+            margin-top: 20px;
+            width: 100%;
+            height: auto;
+
+          }
+
+          .video {
+
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            margin-bottom: 40px;
+
+            iframe {
+
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+
+            }
+
+          }
+
+          .title {
+
+            @include font-size(16px);
+            margin-top: 22px;
+
+          }
+
+          .body {
+
+            @include font-size(14px);
+            line-height: 17px;
+            margin-bottom: 30px;
+
+            a {
+              color: #FFF;
+            }
+
+            .lng-ar & {
+              text-align: right;
+              letter-spacing: 0px !important;
+              -webkit-text-stroke-width: 0px !important;
+            }
+
+            .lng-zh &, .lng-zh-cn &, .lng-zh-hw &, .lng-zh-hk & {
+              -webkit-text-stroke-width: 0.2px;
+            }
+          }
+
+        }
+
+      }
+
+      &.right {
+        
+        margin-top: 82px;
+        float: left;
+        width: $rightColumnWidth;        
+        
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+        /* border-left: 1px solid #434343; */
+        padding: 0px 20px 0px 20px;
+        text-align: center;
+        
+        min-width: 380px;
+
+        p {
+
+          @include font-size(13px);
+          letter-spacing: 1px;
+
+        }
+
+        .title {
+
+          @include font-size(15px);
+
+        }
+
+        header {
+
+          @include font-size(15px);
+          margin-top: 20px;
+
+        }
+
+        .entry {
+
+          p {
+
+            @include font-size(11px);
+            line-height: 15px;
+
+          }
+
+          .role, .separator, .name {
+
+            display: inline;
+
+          }
+
+          .separator {
+
+            margin: 0 4px;
+
+          }
+
+        }
+
+        .space-above {
+
+          margin-top: 14px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: $maxWidth + 100px) {
+
+    .content {
+
+      left: auto;
+      right: auto;
+      width: $maxWidth;
+      margin: 0 auto;
+      margin-bottom: 50px;      
+      
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+      border-right: 1px solid #434343;                  
+
+      .column {
+
+        &.right {
+
+        }
+
+      }
+
+    }
+
+  }
+
+  button.close {
+
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-top: 20px;
+    margin-right: 30px;
+
+    .out {
+      position: relative;
+    }
+
+    .over {
+      position: absolute;
+      top: 0px;
+
+      .browser-Firefox & {
+        top: 1px;
+      }
+    }
+
+  }
+
+}

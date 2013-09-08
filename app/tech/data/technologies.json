@@ -1,0 +1,66 @@
+{
+  "webTechnology": [
+    {
+      "title": "getUserMedia();",
+      "src": "",
+      "description": "A <a href=\"http://www.html5rocks.com/en/tutorials/getusermedia/intro/\">web technology</a> that gives JavaScript developers access to the webcam and microphone."
+    },
+    {
+      "title": "Tailbone",
+      "src": "",
+      "description": "An easy-to-use <a href=\"http://workshop.chromeexperiments.com/examples/tailbone/#1--What-is-Tailbone-\">JavaScript library</a> that makes it simple for JavaScript developers to deploy projects on Google App Engine."
+    },
+    {
+      "title": "Mesh Network",
+      "src": "",
+      "description": "A feature of Tailbone that creates a network between the user’s PC and smartphone browser. Uses WebRTC with a WebSockets fallback."
+    },
+    {
+      "title": "WebSockets",
+      "src": "",
+      "description": "A <a href=\"http://www.html5rocks.com/en/tutorials/websockets/basics/\">web technology</a> that allows browsers to communicate with each other, allowing for fast real time communication."
+    },
+    {
+      "title": "Three.js",
+      "src": "",
+      "description": "A <a href=\"http://threejs.org/\">JavaScript library</a> that uses WebGL to create fast 3D graphics by harnessing the user’s graphics card."
+    },
+    {
+      "title": "WebAudio",
+      "src": "",
+      "description": "A <a href=\"http://www.html5rocks.com/en/tutorials/webaudio/intro/\">web technology</a> that lets developers analyze and manipulate audio files in HTML5."
+    },
+    {
+      "title": "Device Orientation",
+      "src": "",
+      "description": "As you move and rotate your phone, the site records the accelerometer and gyroscope data, then passes it to your PC via Web Socket. This allows you to interact with the video."
+    },
+    {
+      "title": "Camera Vision",
+      "src": "",
+      "description": "The site also uses your computer’s webcam to detect a green square on your phone’s browser. As you move your phone, the position of the square is processed by the website."
+    }
+  ],
+  "googleProducts": [
+    {
+      "title": "Chrome",
+      "src": "",
+      "description": "<a href=\"http://chrome.com/\">Google Chrome</a>’s advanced features, such as WebRTC,  WebGL and getUserMedia(), allowed for create an immersive,  interactive experience online."
+    },
+    {
+      "title": "App Engine",
+      "src": "",
+      "description": "<a href=\"https://developers.google.com/appengine/\">App Engine</a> lets web developers build and deploy instantly scalable web applications on Google’s infrastructure."
+    },
+    {
+      "title": "Compute Engine",
+      "src": "",
+      "description": "<a href=\"https://cloud.google.com/products/compute-engine\">Compute Engine</a> is used to run the project’s mesh network, keeping both phone and PC browsers communicating at all times."
+    },
+    {
+      "title": "Cloud Storage",
+      "src": "",
+      "description": "Video files are stored via Google’s <a href=\"https://developers.google.com/storage/\">Cloud Storage</a> for cost effective file serving online."
+    }
+  ]
+}

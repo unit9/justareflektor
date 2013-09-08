@@ -1,0 +1,55 @@
+%PageView {
+
+  $pageTransitionTime: 0ms;
+  $heroRedColor: #ff3f3f;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  @include opacity(0);
+  display: block;
+  z-index: 1;
+  @include transition-property(opacity);
+  @include transition-duration($pageTransitionTime);
+
+  &.showing {
+    @include opacity(1);
+  }
+
+  &.hiding {
+    @include opacity(0);
+  }
+
+  &.hidden {
+    @include opacity(0);
+    z-index: 0;
+  }
+
+  &.shown {
+    @include opacity(1);
+    display: block;
+  }
+
+  .page {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+  }
+
+  p {
+    -webkit-font-smoothing: antialiased;
+    font-size: 17.9px;
+
+    span {
+      color: $heroRedColor;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+
+}

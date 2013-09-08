@@ -1,0 +1,20 @@
+<h3 class="list-title">Web Technologies</h3>
+<ul id="web-technologies">
+  <% _.each(webTechnology, function(item, i) { %>
+    <li class="item i-<%= i %>">
+      <img src="<%= item.src %>" alt="" />
+      <h3><%= item.title %></h3>
+      <p><%= item.description %></p>
+    </li>
+  <% }); %>
+</ul>
+<h3 class="list-title">Google Products</h3>
+<ul id="google-products">
+  <% _.each(googleProducts, function(item, i) { %>
+    <li class="item i-<%= i %>">
+      <img src="<%= item.src %>" alt="" />
+      <h3><%= item.title %></h3>
+      <p><%= item.description %></p>
+    </li>
+  <% }); %>
+</ul>

@@ -1,0 +1,40 @@
+section.PerformanceWarningView {
+
+  @extend %PageView;
+  z-index: 2;
+
+  .page {
+    display: table;
+  }
+
+  a {
+     color: white;
+  }
+
+  .background {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+  }
+
+  .content {
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    h1 {
+        @include font-size(18px);
+    }
+
+    p {
+        @include font-size(13px);
+        margin-bottom: 20px;
+    }
+
+  }
+
+}

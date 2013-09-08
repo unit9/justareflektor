@@ -1,0 +1,26 @@
+section.RuntimeErrorView {
+
+  @extend %PageView;
+
+  z-index: 99;
+
+  .content {
+
+    position: absolute;
+    width: 700px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -40px;
+    text-align: center;
+
+    button {
+
+      margin-top: 20px;
+
+    }
+
+  }
+
+}
