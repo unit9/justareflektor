@@ -9,7 +9,7 @@ for reference.
 
 ### Tech Page
 
-Just A Reflektor: Sandbox is a JavaScript library made to create, manipulate, test and share post-processing effects in the web browser through WebGL. It was created for Just A Reflektor in order to illustrate how many of the effects in the project were created. The code for the [Tech Page](http://www.justareflektor.com/tech) is a separate module and can be found in [/sandbox](#).
+Just A Reflektor: Sandbox is a JavaScript library made to create, manipulate, test and share post-processing effects in the web browser through WebGL. It was created for Just A Reflektor in order to illustrate how many of the effects in the project were created. The code for the [Tech Page](http://www.justareflektor.com/tech) is a separate module and can be found in [/sandbox](https://github.com/unit9/justareflektor/tree/master/sandbox).
 
 ### Building front end
 

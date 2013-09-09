@@ -5,17 +5,17 @@ __JUST A REFLEKTOR: Sandbox__ is a JavaScript library made to create, manipulate
 
 ### Overview
 
-The `Sandbox` is itself an instance based class, check out its usage [here](#). However, it's made up of many pieces. When you create a `Sandbox`, it internally creates:
+The `Sandbox` is itself an instance based class, check out its usage [here](#usage). However, it's made up of many pieces. When you create a `Sandbox`, it internally creates:
 
 + `Sandbox.Graph`: This is the grid based view of various effects.
 + `Sandbox.Viewport`: This is the output view.
 + `Sandbox.Inspector`: This is the panel on the side to change views as well as manipulate or add effects.
 
-Each of these files can be seen in the [`/src/`](#) directory. These classes create the UI of any given sandbox. What make up the actual effects however are nodes. These can be seen and referenced in `Sandbox.Nodes`. Each one of these effects inherits a set of properties and methods from `Sandbox.Node`. Often these nodes come with shaders. Likewise nodes, and shaders can be found in the `/src/` directory.
+Each of these files can be seen in the [`/src/`](https://github.com/unit9/justareflektor/tree/master/sandbox/src) directory. These classes create the UI of any given sandbox. What make up the actual effects however are nodes. These can be seen and referenced in `Sandbox.Nodes`. Each one of these effects inherits a set of properties and methods from `Sandbox.Node`. Often these nodes come with shaders. Likewise nodes, and shaders can be found in the `/src/` directory.
 
 ### Usage
 
-Download the [minified library](#) and include it in your html. Alternatively see how to [build the library yourself](#).
+Download the [minified library](https://raw.github.com/unit9/justareflektor/master/sandbox/build/sandbox.min.js) and include it in your html. Alternatively see how to [build the library yourself](#custom-build).
 
 ```html
 <script src="js/sandbox.min.js"></script>
