@@ -52,6 +52,13 @@ Here is boilerplate html in order to instantiate a fresh sandbox with no effects
 </html>
 ```
 
+If you'd like the webcam node to work, you'll also have to run a local server. Most operating systems have python, so an easy to get this running is to type this into your commandline:
+
+```
+cd sandbox
+python -m SimpleHTTPServer
+```
+
 ### Custom Build
 
 The sandbox uses [nodejs](http://nodejs.org/) in order to build source files. You'll first want to install that. Next you'll want to install [node-minify](https://npmjs.org/package/node-minify):
