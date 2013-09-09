@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="16px" height="15px" viewBox="-0.393 0 16 15" overflow="visible" enable-background="new -0.393 0 16 15"
+	 xml:space="preserve">
+<defs>
+</defs>
+<circle fill="#FFFFFF" cx="1.459" cy="1.458" r="1.458"/>
+<circle fill="#FFFFFF" cx="1.459" cy="13.542" r="1.458"/>
+<circle fill="#FFFFFF" cx="1.459" cy="7.5" r="1.458"/>
+<path fill="#FFFFFF" d="M13.756,6.042c-0.805,0-1.459,0.654-1.459,1.458c0,0.804,0.654,1.459,1.459,1.459
+	c0.803,0,1.457-0.655,1.457-1.459C15.213,6.696,14.559,6.042,13.756,6.042z"/>
+<polygon fill="#FFFFFF" points="12.922,13.333 12.922,10.715 14.589,10.715 14.589,15 4.766,15 4.766,13.333 "/>
+<polygon fill="#FFFFFF" points="4.766,0 4.766,1.667 12.922,1.667 12.922,4.285 14.589,4.285 14.589,0 "/>
+</svg>

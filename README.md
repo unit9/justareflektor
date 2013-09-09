@@ -2,13 +2,14 @@ justareflektor
 ==============
 http://www.justareflektor.com
 
-This is the repository of the "Just A Reflektor" client side source developed by Google Creative Lab, AATOAA Inc. and UNIT9 Ltd.
+JUST A REFLEKTOR is an interactive short film that explores the themes in Arcade Fire’s “Reflektor.” The film bundles WebGL, WebSockets, getUserMedia and WebAudio into an experience for two devices: your computer and your smartphone. The project was directed by Vincent Morisset and developed by Unit9, AATOAA, and Google’s Creative Lab.
 
-The source is not including third party libraries so will require some work to get up and running - and is provided primarily to consult not to rebuild the application.
+This repository does not include any third party libraries and is provided
+for reference.
 
 ### Tech Page
 
-The Google Labs team have created a self standing module which can be found in 'app/tech' that should be complete and an easy installation to perform experiments with some of the site code.
+Just A Reflektor: Sandbox is a JavaScript library made to create, manipulate, test and share post-processing effects in the web browser through WebGL. It was created for Just A Reflektor in order to illustrate how many of the effects in the project were created. The code for the [Tech Page](http://www.justareflektor.com/tech) is a separate module and can be found in [/sandbox](#).
 
 ### Building front end
 
