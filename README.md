@@ -15,11 +15,11 @@ Just A Reflektor: Sandbox is a JavaScript library made to create, manipulate, te
 
 Desktop and mobile projects are designed to be independent. They do not share any code and can be freely modified without risk of affecting one another.
 ```
-client/app/src/desktop
+app/src/desktop
 ```
 and
 ```
-client/app/src/mobile
+app/src/mobile
 ```
 
 Both desktop and mobile projects are set up using Grunt (http://gruntjs.com/).
