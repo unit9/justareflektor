@@ -2,7 +2,7 @@ justareflektor
 ==============
 http://www.justareflektor.com
 
-JUST A REFLEKTOR is an interactive short film that explores the themes in Arcade Fire’s “Reflektor.” The film bundles WebGL, WebSockets, getUserMedia and WebAudio into an experience for two devices: your computer and your smartphone. The project was directed by Vincent Morisset and developed by Unit9, AATOAA, and Google’s Creative Lab.
+JUST A REFLEKTOR is an interactive short film that explores the themes in Arcade Fire’s “Reflektor.” The film bundles WebGL, WebSockets, getUserMedia and WebAudio into an experience for two devices: your computer and your smartphone. The project was directed by Vincent Morisset and developed by UNIT9, AATOAA, and Google’s Creative Lab.
 
 This repository does not include any third party libraries and is provided
 for reference.
