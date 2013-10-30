@@ -19,7 +19,7 @@
     } );
 
     this.params = {
-      fragment: { value: "test" }
+      fragment: { value: THREE.ShaderToyShader.fragmentShader }
     }
 
     this.buffer = this.outputs.buffer = this.createBuffer();
