@@ -14,8 +14,8 @@
 
     this.params = {
       resolution: { value: new THREE.Vector3(0, 0, 0) },
-      vertexShader: { value: THREE.ShaderToyShader.vertexShader },
-      fragmentShader: { value: THREE.ShaderToyShader.fragmentShader }
+      vertexShader: { value: THREE.ShaderToyShader.vertexShader, onUpdate: _.bind(this.compile, this) },
+      fragmentShader: { value: THREE.ShaderToyShader.fragmentShader, onUpdate: _.bind(this.compile, this) }
     }
 
     this.compile();
@@ -35,6 +35,8 @@
     name: 'ShaderToy',
 
     compile: function() {
+
+      console.log('compiled!');
 
       this.shader = this.quad.material = new THREE.ShaderMaterial( {
         uniforms: THREE.UniformsUtils.clone( THREE.ShaderToyShader.uniforms ),

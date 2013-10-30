@@ -55701,11 +55701,13 @@ THREE.XHRLoader.prototype = {
 
       } else if (_.isString(param.value)) {
 
-        $(elem.querySelector('input')).change(function(e) {
+        $(elem.querySelector('textarea'))
+          .blur(function(e) {
 
-          param.value = $(this).val();
+            param.value = $(this).val();
+            param.onUpdate();
 
-        });
+          });
 
       }
 
