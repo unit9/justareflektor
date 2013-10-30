@@ -5,22 +5,37 @@
   </head>
   <body>
     <div id="content"></div>
+    <style>
+        body {
+          background: black;
+        }
+    </style>
     <div class="scripts">
       <script src="./build/sandbox.js"></script>
+      <script src="./src/nodes/shader.js"></script>
       <script>
 
-        var sandbox = new Sandbox({
-          width: 640,
-          height: 480,
-          size: 25
-        }).appendTo(document.querySelector('#content'));
+        $(function(){
 
-        var loop = function() {
-          sandbox.update();
-          requestAnimationFrame(loop);
-        };
+          var sandbox = new Sandbox({
+              size: 25
+            }).appendTo(document.querySelector('#content'));
+  
+            sandbox.inspector.$.fullpage.trigger("click");
 
-        loop();
+            var shaderNode = new Sandbox.Nodes.ShaderToy();
+            sandbox.add(shaderNode);
+
+  
+            var loop = function() {
+              sandbox.update();
+              requestAnimationFrame(loop);
+            };
+  
+          loop();
+        
+        })
+
 
       </script>
     </div>
