@@ -1,19 +1,31 @@
 <!doctype html>
 <html>
   <head>
-    <title>Just A Reflektor: Sandbox</title>
+    <title>Just A Reflektor: Sandbox Example for WebGL Meetup</title>
+    <style>
+        body {
+          background: black;
+        }
+    </style>
   </head>
   <body>
     <div id="content"></div>
     <div class="scripts">
       <script src="./build/sandbox.js"></script>
+      <script src="./src/nodes/shaderToy.js"></script>
+      <script src="./src/nodes/shaders/ShaderToyShader.js"></script>
       <script>
 
+        $(function(){
+
           var sandbox = new Sandbox({
-            width: 640,
-            height: 480,
             size: 25
           }).appendTo(document.querySelector('#content'));
+
+          sandbox.inspector.$.fullpage.trigger("click");
+
+          var shaderNode = new Sandbox.Nodes.ShaderToy();
+          sandbox.add(shaderNode);
 
           var loop = function() {
             sandbox.update();
@@ -21,6 +33,8 @@
           };
 
           loop();
+
+        });
 
       </script>
     </div>

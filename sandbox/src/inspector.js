@@ -544,7 +544,7 @@
 
       param.id = id;
       html = _.template(
-        '<div class="string"><input id="<%= id %>" type="text" value="<%= value %>"></input></div>',
+        '<div class="string"><textarea id="<%= id %>"><%= value %></textarea></div>',
         param
       );
 
