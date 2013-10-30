@@ -10,10 +10,10 @@ THREE.ShaderToyShader = {
 		// "iChannelTime":  { type: "fv1", value: 10 }, // channel playback time (in seconds)
 		// "iChannelResolution":  { type: "fv", value: 10 }, // channel resolution (in pixels)
 		// "iMouse":  { type: "v4", value: 10 }, // mouse pixel coords. xy: current (if MLB down), zw: click
-		// "iChannel0":  { type: "t", value: 10 }, // input channel0 = 2D/Cube
-		// "iChannel1":  { type: "t", value: 10 }, // input channel1 = 2D/Cube
-		// "iChannel2":  { type: "t", value: 10 }, // input channel2 = 2D/Cube
-		// "iChannel4":  { type: "t", value: 10 }, // input channel3 = 2D/Cube
+		"iChannel0":  { type: "t", value: 10 }, // input channel0 = 2D/Cube
+		"iChannel1":  { type: "t", value: 10 }, // input channel1 = 2D/Cube
+		"iChannel2":  { type: "t", value: 10 }, // input channel2 = 2D/Cube
+		"iChannel4":  { type: "t", value: 10 }, // input channel3 = 2D/Cube
 		// "iDate":  { type: "v4", value: 10 } // (year, month, day, time in seconnds
 
 	},
