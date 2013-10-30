@@ -311,9 +311,21 @@ g g g:hover .inner-dom img, g g g:hover .inner-dom canvas, g g g:hover .inner-do
     background: url(./images/graph.svg) center center no-repeat; }
     .sb.inspector .switch.viewport:hover, .sb.inspector .switch.viewport.enabled {
       background-image: url(./images/hover/graph.svg); }
-  .sb.inspector div.number,
-  .sb.inspector div.string {
+  .sb.inspector div.number {
     overflow: hidden; }
+    .sb.inspector div.string textarea {
+      margin: 0 0 0 20px;
+      width: 139px;
+      height: 200px;
+      display: block;
+      background: rgb(59, 59, 59);
+      color: white;
+      font-size: 13px;
+      line-height: 18px;
+      border: 0;
+      padding: 0 10px;
+      resize: none;
+      outline: none; }
     .sb.inspector div.number div.slider {
       display: inline-block;
       vertical-align: baseline;
@@ -394,7 +406,12 @@ g g g:hover .inner-dom img, g g g:hover .inner-dom canvas, g g g:hover .inner-do
         .sb.inspector .drawer li h3 div.delete:hover {
           background-image: url(./images/hover/x.svg); }
     .sb.inspector .drawer li.param {
-      font-style: italic; }
+      font-style: italic;
+      overflow: hidden; }
+    .sb.inspector .drawer li.param:hover {
+      overflow: visible; }
+    .sb.inspector .drawer li.param:hover label + div.string {
+      overflow: visible; }
     .sb.inspector .drawer .io-0-1 {
       padding-left: 60px;
       background: url(./images/nodes/0-1.svg) 25px center no-repeat; }
