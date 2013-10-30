@@ -1,20 +1,20 @@
 // Created by inigo quilez - iq/2013
 // License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.						    
 
-THREE.AddBlendShader = {
+THREE.ShaderToyShader = {
 
 	uniforms: {
 
 		"iResolution": { type: "v3", value: null }, // viewport resolution (in pixels)
-		"iGlobalTime": { type: "f", value: null }, // shader playback time (in seconds)
-		"iChannelTime":  { type: "fv1", value: 10 }, // channel playback time (in seconds)
-		"iChannelResolution":  { type: "fv", value: 10 }, // channel resolution (in pixels)
-		"iMouse":  { type: "v4", value: 10 }, // mouse pixel coords. xy: current (if MLB down), zw: click
-		"iChannel0":  { type: "t", value: 10 }, // input channel0 = 2D/Cube
-		"iChannel1":  { type: "t", value: 10 }, // input channel1 = 2D/Cube
-		"iChannel2":  { type: "t", value: 10 }, // input channel2 = 2D/Cube
-		"iChannel4":  { type: "t", value: 10 }, // input channel3 = 2D/Cube
-		"iDate":  { type: "v4", value: 10 } // (year, month, day, time in seconnds
+		// "iGlobalTime": { type: "f", value: null }, // shader playback time (in seconds)
+		// "iChannelTime":  { type: "fv1", value: 10 }, // channel playback time (in seconds)
+		// "iChannelResolution":  { type: "fv", value: 10 }, // channel resolution (in pixels)
+		// "iMouse":  { type: "v4", value: 10 }, // mouse pixel coords. xy: current (if MLB down), zw: click
+		// "iChannel0":  { type: "t", value: 10 }, // input channel0 = 2D/Cube
+		// "iChannel1":  { type: "t", value: 10 }, // input channel1 = 2D/Cube
+		// "iChannel2":  { type: "t", value: 10 }, // input channel2 = 2D/Cube
+		// "iChannel4":  { type: "t", value: 10 }, // input channel3 = 2D/Cube
+		// "iDate":  { type: "v4", value: 10 } // (year, month, day, time in seconnds
 
 	},
 
@@ -35,12 +35,14 @@ THREE.AddBlendShader = {
 		// "    return p - 0.05*cos(t.xz + p.x*p.y + cos(t.yw+1.5*3.1415927*p.yx)+p.yx*p.yx );",
 		// "}",
 
+		"uniform vec3 iResolution;",
+
 		"void main( void )",
-		// "{",
-		// "	vec2 q = gl_FragCoord.xy / iResolution.xy;",
-		// "	vec2 p = -1.0 + 2.0*q;",
-		// "	p.x *= iResolution.x/iResolution.y;",
-		// "    p *= 1.5;	",
+		"{",
+			"vec2 q = gl_FragCoord.xy / iResolution.xy;",
+			"vec2 p = -1.0 + 2.0*q;",
+			"p.x *= iResolution.x/iResolution.y;",
+			"p *= 1.5;	",
 
 		// "    vec4 t = 0.15*iGlobalTime*vec4( 1.0, -1.5, 1.2, -1.6 ) + vec4(0.0,2.0,3.0,1.0);",
 		// "	",
@@ -70,7 +72,7 @@ THREE.AddBlendShader = {
 		// "	col *= 0.3 + 0.7*pow( 16.0*q.x*q.y*(1.0-q.x)*(1.0-q.y), 0.2 );",
 		// "	",
 		// "	gl_FragColor = vec4( col, 1.0 );",
-		"	gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );",
+		"	gl_FragColor = vec4( p, 0.0, 1.0 );",
 		"}",
 
 	].join("\n")
