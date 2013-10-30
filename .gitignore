@@ -1,1 +1,2 @@
-.DS_Store
+.DS_Store./sandbox/node_modules/
+sandbox/node_modules/node-minify

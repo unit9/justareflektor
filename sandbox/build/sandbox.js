@@ -55606,6 +55606,14 @@ THREE.XHRLoader.prototype = {
         param
       );
 
+    } else if (_.isString(param.value)) {
+
+      param.id = id;
+      html = _.template(
+        '<div class="string"><input id="<%= id %>" type="text" value="<%= value %>"></input></div>',
+        param
+      );
+
     }
 
     return {
@@ -55688,6 +55696,14 @@ THREE.XHRLoader.prototype = {
         $(elem.querySelector('input')).change(function(e) {
 
           param.value = !!this.checked;
+
+        });
+
+      } else if (_.isString(param.value)) {
+
+        $(elem.querySelector('input')).change(function(e) {
+
+          param.value = $(this).val();
 
         });
 
