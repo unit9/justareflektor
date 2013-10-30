@@ -311,7 +311,8 @@ g g g:hover .inner-dom img, g g g:hover .inner-dom canvas, g g g:hover .inner-do
     background: url(./images/graph.svg) center center no-repeat; }
     .sb.inspector .switch.viewport:hover, .sb.inspector .switch.viewport.enabled {
       background-image: url(./images/hover/graph.svg); }
-  .sb.inspector div.number {
+  .sb.inspector div.number,
+  .sb.inspector div.string {
     overflow: hidden; }
     .sb.inspector div.number div.slider {
       display: inline-block;
@@ -335,7 +336,8 @@ g g g:hover .inner-dom img, g g g:hover .inner-dom canvas, g g g:hover .inner-do
         left: 0;
         bottom: 0;
         width: 0; }
-    .sb.inspector div.number input[type="text"] {
+    .sb.inspector div.number input[type="text"],
+    .sb.inspector div.string input[type="text"] {
       color: white;
       margin-left: 12px;
       font-size: 85%;
