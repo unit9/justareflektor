@@ -57105,6 +57105,8 @@ THREE.InvertShader = {
           Webcam.requested = true;
         }, 1000); // Buh?
 
+      }, function(e) {
+        console.error(e);
       });
 
     }
@@ -57151,6 +57153,7 @@ THREE.InvertShader = {
   });
 
 })();
+
 (function() {
 
   var MAX_WIDTH = 1920 / 4;
